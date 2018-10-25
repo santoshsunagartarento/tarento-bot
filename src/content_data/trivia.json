@@ -1,0 +1,15 @@
+[
+  {
+    "id": "trivia-9Jn6J2",
+    "formData": {
+      "question": "A 20th-century fashion icon, Gabrielle Chanel was better known by what nickname?",
+      "good": "COCO",
+      "bad": [
+        "Chanel",
+        "Number Five"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-02-08T18:27:10.562Z"
+  }
+]
