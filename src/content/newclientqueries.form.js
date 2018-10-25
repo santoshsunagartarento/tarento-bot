@@ -1,26 +1,22 @@
 const _ = require('lodash')
 
 module.exports = {
-  id: 'trivia',
-  title: 'Trivia Questions',
-  renderer: '#trivia-question',
+  id: 'client-queries',
+  title: 'Client Questions',
+  renderer: '#client-queries',
 
   jsonSchema: {
-    title: 'Trivia Questions',
-    description: 'Create a new Trivia question with up to 5 choices and only one correct answer',
+    title: 'Client Questions',
+    description: 'Client Questions for Tarento',
     type: 'object',
-    required: ['question', 'good', 'bad'],
+    required: ['question', 'recommendations'],
     properties: {
       question: {
         type: 'string',
         title: 'Question'
       },
-      good: {
-        type: 'string',
-        title: 'Good answer'
-      },
-      bad: {
-        title: 'Bad Answers',
+      recommendations: {
+        title: 'recommendations',
         type: 'array',
         items: {
           type: 'string',
@@ -39,10 +35,8 @@ module.exports = {
   },
 
   computeData: formData => {
-    const good = { payload: 'TRIVIA_GOOD', text: formData.good }
-    const bad = formData.bad.map(i => ({ payload: 'TRIVIA_BAD', text: i }))
-    const choices = [good, ...bad]
-    console.log(choices);
+    const recommendations = formData.recommendations.map(i => ({ payload: 'TRIVIA_REC', text: i }))
+    const choices = [recommendations]
 
     return {
       question: formData.question,

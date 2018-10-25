@@ -7,5 +7,10 @@ module.exports = {
     text: data.question,
     quick_replies: data.choices.map(choice => `<${choice.payload}> ${choice.text}`),
     typing: data.typing || '2s'
+  }),
+  'client-queries': data => ({
+    text: data.question,
+    quick_replies: data.choices.map(choice => `<${choice.payload}> ${choice.text}`),
+    typing: data.typing || '2s'
   })
 }

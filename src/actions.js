@@ -1,6 +1,36 @@
 const _ = require('lodash')
 
 module.exports = {
+
+  //Begin: Added for Tarento bot
+  startClientConversation: state => {
+    return {
+      ...state, // we clone the existing state
+      count: 0 // we then reset the number of questions asked to `0`
+    }
+  },
+
+  welcomeToClientChat: (state, event) => {
+    //const messageSent = await event.reply('Welcome to Tarento')
+    return {
+      ...state, // we clone the existing state
+      count: 0 // we then reset the number of questions asked to `0`
+    }
+  },
+
+  answerClientQuery: (state, event) => {
+    console.log(event.text);
+
+
+    return {
+      ...state, // we clone the existing state
+      count: 0, // we then reset the number of questions asked to `0`
+      result: 'test'
+    }
+  },
+
+  //End: Added for Tarento bot
+
   startGame: state => {
     return {
       ...state, // we clone the existing state

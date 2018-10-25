@@ -9,89 +9,54 @@
     {
       "id": "rjamSg7LNJbzrEoftkYxQ",
       "name": "entry",
-      "onEnter": ["startGame {}", "say #!text-7jyHxa"],
+      "onEnter": [
+        "startClientConversation {}",
+        "say #!text-040WR9"
+      ],
       "onReceive": null,
       "next": [
         {
           "condition": "true",
-          "node": "ask-question"
+          "node": "welcome-to-clienttest"
         }
       ]
     },
     {
       "id": "4a2d137247",
-      "name": "ask-question",
-      "next": [
-        {
-          "condition": "state.isCorrect === true",
-          "node": "good-answer"
-        },
-        {
-          "condition": "true",
-          "node": "bad-answer"
-        }
-      ],
-      "onEnter": ["sendRandomQuestion {}"],
-      "onReceive": ["validateAnswer {}"]
-    },
-    {
-      "id": "8bfc3b60fd",
-      "name": "good-answer",
+      "name": "welcome-to-clienttest",
       "next": [
         {
           "condition": "true",
-          "node": "next"
+          "node": "answer-client-query"
         }
       ],
-      "onEnter": ["say #!text-~Y4F~Z"],
-      "onReceive": null
-    },
-    {
-      "id": "1f9ae3ab6f",
-      "name": "bad-answer",
-      "next": [
-        {
-          "condition": "true",
-          "node": "next"
-        }
+      "onEnter": [
+        "say #!trivia-question-AwmBFO"
       ],
-      "onEnter": ["say #!text-cTkerJ"],
-      "onReceive": null
-    },
-    {
-      "id": "11219c5913",
-      "name": "next",
-      "next": [
-        {
-          "condition": "state.count >= 3",
-          "node": "over"
-        },
-        {
-          "condition": "true",
-          "node": "next-question"
-        }
-      ],
-      "onEnter": [],
-      "onReceive": null
+      "onReceive": []
     },
     {
       "id": "25e5cd0fbe",
       "name": "over",
       "next": [],
-      "onEnter": ["say #!text-zss1Nr"],
+      "onEnter": [
+        "say #!text-zss1Nr"
+      ],
       "onReceive": null
     },
     {
-      "id": "001c3d992a",
-      "name": "next-question",
+      "id": "58d706bcd9",
+      "name": "answer-client-query",
       "next": [
         {
           "condition": "true",
-          "node": "ask-question"
+          "node": "over"
         }
       ],
-      "onEnter": ["say #!text-kFIEdO"],
-      "onReceive": null
+      "onEnter": [],
+      "onReceive": [
+        "answerClientQuery {}"
+      ]
     }
   ]
 }
