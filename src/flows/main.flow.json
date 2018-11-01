@@ -11,7 +11,8 @@
       "name": "entry",
       "onEnter": [
         "startClientConversation {}",
-        "say #!text-040WR9"
+        "say #!text-0RcWjO",
+        "say #!text-boEm~n"
       ],
       "onReceive": null,
       "next": [
@@ -26,21 +27,33 @@
       "name": "welcome-to-clienttest",
       "next": [
         {
-          "condition": "true",
+          "condition": "state.isCorrect === true",
           "node": "answer-client-query"
+        },
+        {
+          "condition": "true",
+          "node": "No-Aswer"
         }
       ],
       "onEnter": [
-        "say #!trivia-question-AwmBFO"
+        "welcomeToClientChat {}"
       ],
-      "onReceive": []
+      "onReceive": [
+        "knowingTarento {}"
+      ]
     },
     {
       "id": "25e5cd0fbe",
       "name": "over",
-      "next": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "entry"
+        }
+      ],
       "onEnter": [
-        "say #!text-zss1Nr"
+        "say #!text-zss1Nr",
+        "say #!text-vYJ6U0"
       ],
       "onReceive": null
     },
@@ -53,10 +66,25 @@
           "node": "over"
         }
       ],
-      "onEnter": [],
-      "onReceive": [
+      "onEnter": [
+        "say #!text-Bul_Au",
         "answerClientQuery {}"
-      ]
+      ],
+      "onReceive": []
+    },
+    {
+      "id": "26bd8d143f",
+      "name": "No-Aswer",
+      "next": [
+        {
+          "condition": "true",
+          "node": "over"
+        }
+      ],
+      "onEnter": [
+        "say #!text-WQ8Nws"
+      ],
+      "onReceive": null
     }
   ]
 }

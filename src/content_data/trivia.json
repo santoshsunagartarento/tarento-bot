@@ -15,11 +15,10 @@
   {
     "id": "trivia-question-AwmBFO",
     "formData": {
-      "question": "Welcome to Tarento!",
+      "question": "What you want to know about tarento",
       "good": "About Tarento",
       "bad": [
-        "About Tarento",
-        "Want to know the services provided?",
+        "About services provided?",
         "Technologies used?",
         "Projects handled by us?",
         "Clients with us!"

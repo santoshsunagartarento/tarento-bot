@@ -2,12 +2,12 @@
   {
     "id": "client-queries-wWvjVU",
     "formData": {
-      "question": "Welcome to Tarento!",
+      "question": "What you want to know about Tarento",
       "recommendations": [
         "About Tarento",
         "Want to know the services provided?",
         "Technologies used?",
-        "Projects handled by us?\"",
+        "Projects handled by us?",
         "Clients with us!"
       ]
     },
@@ -22,7 +22,7 @@
         "About Tarento",
         "Want to know the services provided?",
         "Technologies used?",
-        "Projects handled by us?\"",
+        "Projects handled by us?",
         "Clients with us!"
       ]
     },
