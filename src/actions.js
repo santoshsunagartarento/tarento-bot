@@ -11,20 +11,20 @@ module.exports = {
   },
 
   welcomeToClientChat:async(state, event) => {
-    // const messageSent = await event.reply('#!client-queries-wWvjVU');
+    const messageSent = await event.reply('#!client-queries-wWvjVU');
     // const goodAnswer = _.find(messageSent.context.choices, { payload: 'TRIVIA_REC' });
-    const messageSent = await event.reply('#!trivia-question-AwmBFO');
-    // const goodAnswer = messageSent.context.choices[0].filter(function(ans){
-    //   return ans;
-    // });
-    const goodAnswer = _.find(messageSent.context.choices, { payload: 'TRIVIA_GOOD' });
-    const badAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'TRIVIA_GOOD' }], 'payload');
+    // const messageSent = await event.reply('#!trivia-question-AwmBFO');
+    const goodAnswer = messageSent.context.choices[0].filter(function(ans){
+      return ans;
+    });
+    // const goodAnswer = _.find(messageSent.context.choices, { payload: 'TRIVIA_GOOD' });
+    // const badAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'TRIVIA_GOOD' }], 'payload');
    
     return {
       ...state, // We clone the state
       isCorrect: null, // We reset `isCorrect` (optional)ss
       goodAnswer,
-      badAnswer
+      // badAnswer
     }
   },
 
@@ -32,16 +32,13 @@ module.exports = {
     console.log(state.goodAnswer )  
     // console.log(state.badAnswer);
     console.log(event.text);
-    
     let isCorrect = state.goodAnswer && event.text === state.goodAnswer.text    
     if(!isCorrect)
     {
-    let FindArrayinBad =  _.find(state.badAnswer, { text: event.text });
-
+    // let FindArrayinBad =  _.find(state.badAnswer, { text: event.text });
+    let FindArrayinBad =  _.find(state.goodAnswer, { text: event.text });
     isCorrect = FindArrayinBad?true:false;
     }
-
-
     return { ...state, isCorrect, erorr:isCorrect?null:event.text}
   },  
 
