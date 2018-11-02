@@ -2,7 +2,7 @@ const _ = require('lodash')
 
 module.exports = {
   id: 'client-queries-searchtokens',
-  title: 'Client Questions With Sarch Tokens',
+  title: 'Client Questions With Search Tokens',
   renderer: '#client-queries-searchtokens',
 
   jsonSchema: {
