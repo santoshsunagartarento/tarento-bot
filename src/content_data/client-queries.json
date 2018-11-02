@@ -4,6 +4,7 @@
     "formData": {
       "question": "About Tarento",
       "answer": "We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
+      "criteria": "TEST",
       "recommendations": [
         "Clients",
         "Services"

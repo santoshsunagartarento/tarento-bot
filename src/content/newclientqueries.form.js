@@ -19,6 +19,10 @@ module.exports = {
         type: 'string',
         title: 'Answer'
       },
+      criteria: {
+        type: 'string',
+        title: 'Criteria'
+      },
       recommendations: {
         title: 'Recommendations',
         type: 'array',
@@ -40,6 +44,7 @@ module.exports = {
 
   computeData: formData => {
     const answer = { payload: 'CLIENT_ANS', text: formData.answer }
+    const criteria = { payload: 'CLIENT_CRITERIA', text: formData.criteria }
     const recommendations = formData.recommendations.map(i => ({ payload: 'CLIENT_REC', text: i }))
     const choices = [answer, ...recommendations]
 
