@@ -58,5 +58,19 @@
     },
     "createdBy": "admin",
     "createdOn": "2018-11-02T08:20:40.820Z"
+  },
+  {
+    "id": "client-queries-wu~T4r",
+    "formData": {
+      "question": "Welcome To Tarento",
+      "answer": "Hey! Welcome to Tarento World We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland. How can we help? We're here for you!",
+      "recommendations": [
+        "About",
+        "Clients",
+        "Services"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-02T09:15:06.482Z"
   }
 ]
