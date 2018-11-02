@@ -1,15 +1,15 @@
 const _ = require('lodash')
 
 module.exports = {
-  id: 'client-queries',
-  title: 'Client Questions',
-  renderer: '#client-queries',
+  id: 'client-queries-searchtokens',
+  title: 'Client Questions With Sarch Tokens',
+  renderer: '#client-queries-searchtokens',
 
   jsonSchema: {
-    title: 'Client Questions',
-    description: 'Client Questions for Tarento bot',
+    title: 'Client Questions With Search Tokens',
+    description: 'Client Questions for Tarento bot with search Tokens',
     type: 'object',
-    required: ['question', 'answer', 'recommendations'],
+    required: ['question', 'answer', 'searchtokens'],
     properties: {
       question: {
         type: 'string',
@@ -19,14 +19,10 @@ module.exports = {
         type: 'string',
         title: 'Answer'
       },
-      recommendations: {
-        title: 'Recommendations',
-        type: 'array',
-        items: {
-          type: 'string',
-          default: ''
-        }
-      }
+      searchtokens: {
+        type: 'string',
+        title: 'searchtokens'
+      },
     }
   },
 
@@ -40,8 +36,8 @@ module.exports = {
 
   computeData: formData => {
     const answer = { payload: 'CLIENT_ANS', text: formData.answer }
-    const recommendations = formData.recommendations.map(i => ({ payload: 'CLIENT_REC', text: i }))
-    const choices = [answer, ...recommendations]
+    const searchtokens = { payload: 'CLIENT_SEARCH_TOKENS', text: formData.searchtokens }
+    const choices = [answer, searchtokens]
 
     return {
       question: formData.question,

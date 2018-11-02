@@ -1,0 +1,42 @@
+[
+  {
+    "id": "client-queries-searchtokens-930NNj",
+    "formData": {
+      "question": "What you do at Tarento?",
+      "answer": "Need to add content",
+      "searchtokens": "test"
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-02T08:31:13.297Z"
+  },
+  {
+    "id": "client-queries-searchtokens-69kn7~",
+    "formData": {
+      "question": "Projects handled by Tarento?",
+      "answer": "Need to add content",
+      "searchtokens": "test"
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-02T08:31:25.483Z"
+  },
+  {
+    "id": "client-queries-searchtokens-0pI1PM",
+    "formData": {
+      "question": "Want to know the services provided by Tarento?",
+      "answer": "Need to add content",
+      "searchtokens": "test"
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-02T08:31:38.192Z"
+  },
+  {
+    "id": "client-queries-searchtokens-0KGs4h",
+    "formData": {
+      "question": "Clients tied up with Tarento?",
+      "answer": "Need to add content",
+      "searchtokens": "test"
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-02T08:31:50.723Z"
+  }
+]

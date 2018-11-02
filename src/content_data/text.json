@@ -20,7 +20,7 @@
   {
     "id": "text-boEm~n",
     "formData": {
-      "text": "About Tarento: We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
+      "text": "We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
       "typing": true
     },
     "createdBy": "admin",
@@ -34,15 +34,6 @@
     },
     "createdBy": "admin",
     "createdOn": "2018-10-31T09:34:02.936Z"
-  },
-  {
-    "id": "text-vYJ6U0",
-    "formData": {
-      "text": "Say Something to know about Tarento",
-      "typing": true
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-10-31T09:40:15.727Z"
   },
   {
     "id": "text-Bul_Au",

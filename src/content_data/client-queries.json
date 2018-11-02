@@ -1,107 +1,61 @@
 [
   {
-    "id": "client-queries-wWvjVU",
+    "id": "client-queries-8LzjTj",
     "formData": {
-      "question": "What you want to know about Tarento",
+      "question": "About Tarento",
+      "answer": "We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
       "recommendations": [
-        "About Tarento",
-        "Want to know the services provided?",
-        "Technologies used?",
-        "Projects handled by us?",
-        "Clients with us!"
+        "Clients",
+        "Services"
       ]
     },
     "createdBy": "admin",
-    "createdOn": "2018-10-25T09:36:54.146Z"
+    "createdOn": "2018-11-02T08:18:36.501Z"
   },
   {
-    "id": "client-queries-6h~ILK",
+    "id": "client-queries-9wiv1v",
     "formData": {
-      "question": "About Tarento: We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
+      "question": "Clients in Tarento",
+      "answer": "Cimplyfive,apoteket,Lithium,telenor,cab-hound,INBRIX,Edukul",
       "recommendations": [
-        "About Tarento",
-        "Want to know the services provided?",
-        "Technologies used?",
-        "Projects handled by us?",
-        "Clients with us!"
+        "About",
+        "Services"
       ]
     },
     "createdBy": "admin",
-    "createdOn": "2018-10-25T09:43:41.512Z"
+    "createdOn": "2018-11-02T08:19:20.314Z"
   },
   {
-    "id": "client-queries-KwPlpR",
+    "id": "client-queries-3fT2De",
     "formData": {
-      "question": "Clients with us: Cimplyfive,apoteket,Lithium,telenor,cab-hound,INBRIX,Edukul",
-      "recommendations": [
-        "About Tarento",
-        "Want to know the services provided?",
-        "Technologies used?",
-        "Projects handled by us?",
-        "Clients with us!"
-      ]
+      "question": "Technologies used in Tarento",
+      "answer": "Custom Java, .Net, PHP & RoR development, Sharepoint, Oracle Middleware, Adobe Flex/Flash, MS Dynamics, Enterprise Mobility, Testing and a few other technology areas.",
+      "recommendations": []
     },
     "createdBy": "admin",
-    "createdOn": "2018-10-25T09:44:12.351Z"
+    "createdOn": "2018-11-02T08:19:50.071Z"
   },
   {
-    "id": "client-queries-ZvKSik",
+    "id": "client-queries-P99~YF",
     "formData": {
-      "question": "Technologies used: Custom Java, .Net, PHP & RoR development, Sharepoint, Oracle Middleware, Adobe Flex/Flash, MS Dynamics, Enterprise Mobility, Testing and a few other technology areas.",
-      "recommendations": [
-        "About Tarento",
-        "Want to know the services provided?",
-        "Technologies used?",
-        "Projects handled by us?",
-        "Clients with us!"
-      ]
+      "question": "Projects handled by Tarento",
+      "answer": "Microsoft projects,Development of mobile and web-applications,SAP applications and QA",
+      "recommendations": []
     },
     "createdBy": "admin",
-    "createdOn": "2018-10-25T09:44:32.464Z"
+    "createdOn": "2018-11-02T08:20:11.317Z"
   },
   {
-    "id": "client-queries-3F~o5c",
+    "id": "client-queries-_BgQHB",
     "formData": {
-      "question": "Projects handled by us: Microsoft projects,Development of mobile and web-applications,SAP applications and QA",
+      "question": "Services provided by Tarento",
+      "answer": "Development, QA, Business Analyst, Project management, Resources to other companies.",
       "recommendations": [
-        "About Tarento",
-        "Want to know the services provided?",
-        "Technologies used?",
-        "Projects handled by us?",
-        "Clients with us!"
+        "About",
+        "Clients"
       ]
     },
     "createdBy": "admin",
-    "createdOn": "2018-10-25T09:45:25.595Z"
-  },
-  {
-    "id": "client-queries-9V51D5",
-    "formData": {
-      "question": "Want to know the services provided: Development, QA, Business Analyst, Project management, Resources to other companies.",
-      "recommendations": [
-        "About Tarento",
-        "Want to know the services provided?",
-        "Technologies used?",
-        "Projects handled by us?",
-        "Clients with us!"
-      ]
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-10-25T09:45:50.957Z"
-  },
-  {
-    "id": "client-queries-lh~nGY",
-    "formData": {
-      "question": "Welcome to Tarento!",
-      "recommendations": [
-        "About Tarento",
-        "Clients with us!",
-        "Projects handled by us?",
-        "Technologies used?",
-        "Want to know the services provided?"
-      ]
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-10-25T10:08:56.188Z"
+    "createdOn": "2018-11-02T08:20:40.820Z"
   }
 ]
