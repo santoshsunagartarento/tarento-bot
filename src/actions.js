@@ -11,14 +11,19 @@ module.exports = {
   },
 
   welcomeToClientChat:async(state, event) => {
-    const messageSent = await event.reply('#!client-queries-wu~T4r');
+    let messageSent;
+    if(state.userInput && state.userInput === "About"){
+      messageSent = await event.reply('#!client-queries-8LzjTj');
+    }
+    else
+      messageSent = await event.reply('#!client-queries-QY2dPJ');
     // const goodAnswer = _.find(messageSent.context.choices, { payload: 'TRIVIA_REC' });
     // const messageSent = await event.reply('#!trivia-question-AwmBFO');
     // const goodAnswer = messageSent.context.choices.filter(function(ans){
     //   return ans;
     // });
     // const goodAnswer = _.find(messageSent.context.choices, { payload: 'TRIVIA_GOOD' });
-    const goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_REC' }], 'payload');
+    const goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
     return {
       ...state, // We clone the state
       isCorrect: null, // We reset `isCorrect` (optional)ss
@@ -42,15 +47,17 @@ module.exports = {
   },  
 
   answerClientQuery: (state, event) => {
-    if(state.userInput === "About")
-    {
-      const messageSent = await event.reply('#!client-queries-wu~T4r');
-      const goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_REC' }], 'payload');
-    }
+    
+    // if(state.userInput === "About")
+    // {
+      // const messageSent = await event.reply('#!client-queries-wu~T4r');
+      // const messageSent = await event.reply('#!client-queries-8LzjTj');
+      // const goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+    // }
     console.log(state);
     return {
       ...state,
-      goodAnswer
+      // goodAnswer
      // we then reset the number of questions asked to `0`
      
     }

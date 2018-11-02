@@ -67,8 +67,8 @@
         }
       ],
       "onEnter": [
-        "say #!text-Bul_Au",
-        "answerClientQuery {}"
+        "welcomeToClientChat {}",
+        "say #!text-Bul_Au"
       ],
       "onReceive": []
     },

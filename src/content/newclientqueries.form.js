@@ -7,20 +7,16 @@ module.exports = {
 
   jsonSchema: {
     title: 'Client Questions',
-    description: 'Client Questions for Tarento bot',
+    description: 'Client Questions for Tarento',
     type: 'object',
-    required: ['question', 'answer', 'recommendations'],
+    required: ['question', 'recommendations'],
     properties: {
       question: {
         type: 'string',
         title: 'Question'
       },
-      answer: {
-        type: 'string',
-        title: 'Answer'
-      },
       recommendations: {
-        title: 'Recommendations',
+        title: 'recommendations',
         type: 'array',
         items: {
           type: 'string',
@@ -31,7 +27,7 @@ module.exports = {
   },
 
   uiSchema: {
-    recommendations: {
+    bad: {
       'ui:options': {
         orderable: false
       }
@@ -39,9 +35,8 @@ module.exports = {
   },
 
   computeData: formData => {
-    const answer = { payload: 'CLIENT_ANS', text: formData.answer }
-    const recommendations = formData.recommendations.map(i => ({ payload: 'CLIENT_REC', text: i }))
-    const choices = [answer, ...recommendations]
+    const recommendations = formData.recommendations.map(i => ({ payload: 'TRIVIA_REC', text: i }))
+    const choices = [recommendations]
 
     return {
       question: formData.question,
