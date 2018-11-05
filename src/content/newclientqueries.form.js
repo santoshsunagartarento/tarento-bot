@@ -46,14 +46,18 @@ module.exports = {
     const answer = { payload: 'CLIENT_ANS', text: formData.answer }
     const criteria = { payload: 'CLIENT_CRITERIA', text: formData.criteria }
     const recommendations = formData.recommendations.map(i => ({ payload: 'CLIENT_REC', text: i }))
-    const choices = [answer, ...recommendations]
+    const choices = [...recommendations]
 
     return {
       question: formData.question,
-      choices: _.shuffle(choices)
+      choices: _.shuffle(choices),
+      answer: answer
     }
   },
 
-  computePreviewText: formData => 'Question: ' + formData.question,
+  computePreviewText: formData => {
+    return 'Question: '+ formData.question+'Answer:'+ formData.answer;
+    
+},
   computeMetadata: null
 }

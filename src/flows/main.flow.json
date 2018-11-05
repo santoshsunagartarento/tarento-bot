@@ -45,16 +45,8 @@
     {
       "id": "25e5cd0fbe",
       "name": "over",
-      "next": [
-        {
-          "condition": "true",
-          "node": "entry"
-        }
-      ],
-      "onEnter": [
-        "say #!text-zss1Nr",
-        "say #!text-vYJ6U0"
-      ],
+      "next": [],
+      "onEnter": [],
       "onReceive": null
     },
     {
@@ -62,15 +54,20 @@
       "name": "answer-client-query",
       "next": [
         {
+          "condition": "state.isCorrect == true",
+          "node": "welcome-to-clienttest"
+        },
+        {
           "condition": "true",
           "node": "over"
         }
       ],
       "onEnter": [
-        "say #!text-Bul_Au",
-        "answerClientQuery {}"
+        "welcomeToClientChat {}"
       ],
-      "onReceive": []
+      "onReceive": [
+        "knowingTarento {}"
+      ]
     },
     {
       "id": "26bd8d143f",
