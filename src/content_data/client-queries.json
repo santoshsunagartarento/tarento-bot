@@ -2,8 +2,8 @@
   {
     "id": "client-queries-8LzjTj",
     "formData": {
-      "question": "About Tarento",
-      "answer": "We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
+      "question": "We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
+      "answer": "About Tarento",
       "criteria": "About",
       "recommendations": [
         "Clients",
@@ -16,8 +16,8 @@
   {
     "id": "client-queries-9wiv1v",
     "formData": {
-      "question": "Clients in Tarento",
-      "answer": "Cimplyfive,apoteket,Lithium,telenor,cab-hound,INBRIX,Edukul",
+      "question": " Cimplyfive,apoteket,Lithium,telenor,cab-hound,INBRIX,Edukul",
+      "answer": "Clients in Tarento",
       "criteria": "Clients",
       "recommendations": [
         "About",
@@ -32,6 +32,7 @@
     "formData": {
       "question": "Technologies used in Tarento",
       "answer": "Custom Java, .Net, PHP & RoR development, Sharepoint, Oracle Middleware, Adobe Flex/Flash, MS Dynamics, Enterprise Mobility, Testing and a few other technology areas.",
+      "criteria": "Technologies",
       "recommendations": []
     },
     "createdBy": "admin",
@@ -42,6 +43,7 @@
     "formData": {
       "question": "Projects handled by Tarento",
       "answer": "Microsoft projects,Development of mobile and web-applications,SAP applications and QA",
+      "criteria": "Projects",
       "recommendations": []
     },
     "createdBy": "admin",
@@ -50,8 +52,9 @@
   {
     "id": "client-queries-_BgQHB",
     "formData": {
-      "question": "Services provided by Tarento",
-      "answer": "Development, QA, Business Analyst, Project management, Resources to other companies.",
+      "question": "Development, QA, Business Analyst, Project management, Resources to other companies.",
+      "answer": "Services provided by Tarento",
+      "criteria": "Services",
       "recommendations": [
         "About",
         "Clients"
@@ -63,8 +66,9 @@
   {
     "id": "client-queries-wu~T4r",
     "formData": {
-      "question": "How can we help? We're here for you",
-      "answer": "xyz",
+      "question": "Welcome To Tarento",
+      "answer": "Hey! Welcome to Tarento World We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland. How can we help? We're here for you!",
+      "criteria": "",
       "recommendations": [
         "About",
         "Clients",
@@ -75,9 +79,11 @@
     "createdOn": "2018-11-02T09:15:06.482Z"
   },
   {
-    "id": "client-queries-QY2dPJ",
+    "id": "client-queries-y~4ePV",
     "formData": {
-      "question": "How can we help? We're here for you",
+      "question": "How can we help? We're here for you!",
+      "answer": "",
+      "criteria": "",
       "recommendations": [
         "About",
         "Clients",
@@ -85,6 +91,6 @@
       ]
     },
     "createdBy": "admin",
-    "createdOn": "2018-11-02T11:15:31.421Z"
+    "createdOn": "2018-11-05T05:46:15.656Z"
   }
 ]

@@ -7,16 +7,24 @@ module.exports = {
 
   jsonSchema: {
     title: 'Client Questions',
-    description: 'Client Questions for Tarento',
+    description: 'Client Questions for Tarento bot',
     type: 'object',
-    required: ['question', 'recommendations'],
+    required: ['question', 'answer', 'recommendations'],
     properties: {
       question: {
         type: 'string',
         title: 'Question'
       },
+      answer: {
+        type: 'string',
+        title: 'Answer'
+      },
+      criteria: {
+        type: 'string',
+        title: 'Criteria'
+      },
       recommendations: {
-        title: 'recommendations',
+        title: 'Recommendations',
         type: 'array',
         items: {
           type: 'string',
@@ -27,7 +35,7 @@ module.exports = {
   },
 
   uiSchema: {
-    bad: {
+    recommendations: {
       'ui:options': {
         orderable: false
       }
@@ -35,15 +43,21 @@ module.exports = {
   },
 
   computeData: formData => {
-    const recommendations = formData.recommendations.map(i => ({ payload: 'TRIVIA_REC', text: i }))
-    const choices = [recommendations]
+    const answer = { payload: 'CLIENT_ANS', text: formData.answer }
+    const criteria = { payload: 'CLIENT_CRITERIA', text: formData.criteria }
+    const recommendations = formData.recommendations.map(i => ({ payload: 'CLIENT_REC', text: i }))
+    const choices = [...recommendations]
 
     return {
       question: formData.question,
-      choices: _.shuffle(choices)
+      choices: _.shuffle(choices),
+      answer: answer
     }
   },
 
-  computePreviewText: formData => 'Question: ' + formData.question,
+  computePreviewText: formData => {
+    return 'Question: '+ formData.question+'Answer:'+ formData.answer;
+    
+},
   computeMetadata: null
 }

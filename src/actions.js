@@ -11,19 +11,33 @@ module.exports = {
   },
 
   welcomeToClientChat:async(state, event) => {
-    let messageSent;
+    let messageSent,goodAnswer;
+  
     if(state.userInput && state.userInput === "About"){
       messageSent = await event.reply('#!client-queries-8LzjTj');
+      goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+    }
+    else if(state.userInput && state.userInput === "Clients")
+    {
+      messageSent = await event.reply('#!client-queries-9wiv1v');
+      goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+    }
+    else if(state.userInput && state.userInput === "Services")
+    {
+      messageSent = await event.reply('#!client-queries-_BgQHB');
+      goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
     }
     else
-      messageSent = await event.reply('#!client-queries-QY2dPJ');
+    {
+      messageSent = await event.reply('#!client-queries-y~4ePV');
     // const goodAnswer = _.find(messageSent.context.choices, { payload: 'TRIVIA_REC' });
     // const messageSent = await event.reply('#!trivia-question-AwmBFO');
     // const goodAnswer = messageSent.context.choices.filter(function(ans){
     //   return ans;
-    // });
+    // });y
     // const goodAnswer = _.find(messageSent.context.choices, { payload: 'TRIVIA_GOOD' });
-    const goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+     goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+    }
     return {
       ...state, // We clone the state
       isCorrect: null, // We reset `isCorrect` (optional)ss
@@ -33,15 +47,32 @@ module.exports = {
   },
 
   knowingTarento:(state,event)=>{
+    let isCorrect,temp = false ;
+
+    let answer;
+    let index =-1;
     console.log(state.goodAnswer )  
     // console.log(state.badAnswer);
     console.log(event.text);
-    let isCorrect = state.goodAnswer && event.text === state.goodAnswer.text    
+    isCorrect = state.goodAnswer && event.text === state.goodAnswer.text    
     if(!isCorrect)
     {
     // let FindArrayinBad =  _.find(state.badAnswer, { text: event.text });
     let FindArrayinBad =  _.find(state.goodAnswer, { text: event.text });
     isCorrect = FindArrayinBad?true:false;
+    }
+    if(!isCorrect)
+    {
+      answer = event.text.split(" ");
+      index =  answer.indexOf('About');
+      index = index!=-1?index:answer.indexOf('Clients');
+     index = index!=-1?index:answer.indexOf( 'Services');
+    }
+    if(index!=-1)
+    {
+      event.text = answer[index];
+      let FindArrayinBad =  _.find(state.goodAnswer, { text: event.text });
+      isCorrect = FindArrayinBad?true:false;
     }
     return { ...state, isCorrect, erorr:isCorrect?null:event.text, userInput: event.text}
   },  
