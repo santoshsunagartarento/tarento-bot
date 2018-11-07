@@ -1,4 +1,7 @@
 const _ = require('lodash')
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+var mongodbservice = require('./mongodbservice');
 
 module.exports = {
 
@@ -12,20 +15,38 @@ module.exports = {
 
   welcomeToClientChat:async(state, event) => {
     let messageSent,goodAnswer;
-  
+    //Begin: Added to save chat to mongodb
+    mongodbservice.insertChatContentToMongoDb("TARENTO_WEBCHAT", event.text, function(err, result) {
+      console.log(result);
+    });
+    //End: Added to save chat to mongodb
     if(state.userInput && state.userInput === "About"){
       messageSent = await event.reply('#!client-queries-8LzjTj');
       goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+      //Begin: Added to save chat to mongodb
+      mongodbservice.insertChatContentToMongoDb("TARENTO_WEBCHAT", state.userInput, function(err, result) {
+        console.log(result);
+      });
     }
     else if(state.userInput && state.userInput === "Clients")
     {
       messageSent = await event.reply('#!client-queries-9wiv1v');
       goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+      //Begin: Added to save chat to mongodb
+      mongodbservice.insertChatContentToMongoDb("TARENTO_WEBCHAT", state.userInput, function(err, result) {
+        console.log(result);
+      });
+      //End: Added to save chat to mongodb
     }
     else if(state.userInput && state.userInput === "Services")
     {
       messageSent = await event.reply('#!client-queries-_BgQHB');
       goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+      //Begin: Added to save chat to mongodb
+      mongodbservice.insertChatContentToMongoDb("TARENTO_WEBCHAT", state.userInput, function(err, result) {
+        console.log(result);
+      });
+      //End: Added to save chat to mongodb
     }
     else
     {
@@ -51,10 +72,10 @@ module.exports = {
 
     let answer;
     let index =-1;
-    console.log(state.goodAnswer )  
+    console.log(state.goodAnswer )
     // console.log(state.badAnswer);
     console.log(event.text);
-    isCorrect = state.goodAnswer && event.text === state.goodAnswer.text    
+    isCorrect = state.goodAnswer && event.text === state.goodAnswer.text
     if(!isCorrect)
     {
     // let FindArrayinBad =  _.find(state.badAnswer, { text: event.text });
@@ -75,10 +96,10 @@ module.exports = {
       isCorrect = FindArrayinBad?true:false;
     }
     return { ...state, isCorrect, erorr:isCorrect?null:event.text, userInput: event.text}
-  },  
+  },
 
   answerClientQuery: (state, event) => {
-    
+
     // if(state.userInput === "About")
     // {
       // const messageSent = await event.reply('#!client-queries-wu~T4r');
@@ -90,7 +111,7 @@ module.exports = {
       ...state,
       // goodAnswer
      // we then reset the number of questions asked to `0`
-     
+
     }
   },
 
