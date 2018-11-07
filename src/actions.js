@@ -17,7 +17,7 @@ module.exports = {
     let messageSent,goodAnswer;
     //Begin: Added to save chat to mongodb
     mongodbservice.insertChatContentToMongoDb("TARENTO_WEBCHAT", event.text, function(err, result) {
-      console.log(result);
+      console.log("Chat content added to mongodb with db tarentobot and collection tarentowebchats");
     });
     //End: Added to save chat to mongodb
     if(state.userInput && state.userInput === "About"){
