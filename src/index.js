@@ -40,4 +40,39 @@ module.exports = bp => {
   bp.hear({ type: /text|message|quick_reply/i }, (event, next) => {
     bp.dialogEngine.processMessage(event.sessionId || event.user.id, event).then()
   })
+
+
+  //Begin: Added changes for Human in the loop
+    bp.middlewares.load()
+
+    bp.hear(/HITL_START/, (event, next) => {
+      bp.messenger.sendTemplate(event.user.id, {
+        template_type: 'button',
+        text: 'Bot paused, a human will get in touch very soon.',
+        buttons: [{
+          type: 'postback',
+          title: 'Cancel request',
+          payload: 'HITL_STOP'
+        }]
+      })
+
+      bp.notifications.send({
+        message: event.user.first_name + ' wants to talk to a human',
+        level: 'info',
+        url: '/modules/botpress-hitl'
+      })
+      bp.hitl.pause(event.platform, event.user.id)
+    })
+
+    bp.hear(/HITL_STOP/, (event, next) => {
+      bp.messenger.sendText(event.user.id, 'Human in the loop disabled. Bot resumed.')
+      bp.hitl.unpause(event.platform, event.user.id)
+    })
+
+    bp.hear({ type: 'message', text: /.+/i }, (event, next) => {
+      bp.messenger.sendText(event.user.id, 'You said: ' + event.text)
+    })
+    //End: Added changes for Human in the loop
+
+
 }
