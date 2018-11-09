@@ -10,10 +10,12 @@
     "@botpress/channel-web": "^10.31.0",
     "@botpress/hitl": "^10.50.0",
     "botpress": "^10.31.0",
+    "botpress-mod-webchat": "^0.5.0",
     "jsdoc-api": "^4.0.2",
     "lodash": "^4.17.5",
     "moment": "^2.20.1",
-    "mongodb": "^3.1.8"
+    "mongodb": "^3.1.8",
+    "sqlite3": "^4.0.3"
   },
   "scripts": {
     "start": "botpress start",
