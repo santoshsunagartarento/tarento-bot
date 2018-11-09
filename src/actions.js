@@ -2,6 +2,8 @@ const _ = require('lodash')
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 var mongodbservice = require('./mongodbservice');
+var hitlService = require('./hitlService');
+const index = require('./index')
 
 module.exports = {
 
@@ -20,6 +22,7 @@ module.exports = {
       console.log("Chat content added to mongodb with db tarentobot and collection tarentowebchats");
     });
     //End: Added to save chat to mongodb
+
     if(state.userInput && state.userInput === "About"){
       messageSent = await event.reply('#!client-queries-8LzjTj');
       goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
@@ -94,6 +97,13 @@ module.exports = {
       event.text = answer[index];
       let FindArrayinBad =  _.find(state.goodAnswer, { text: event.text });
       isCorrect = FindArrayinBad?true:false;
+    }
+    if(!isCorrect) {
+      //Begin: Added to pauseChatAndNotify
+      hitlService.pauseChatAndNotify(event, function(err, result) {
+        console.log("Chat paused, human will get in touch with user soon");
+      });
+      //End: Added to pauseChatAndNotify
     }
     return { ...state, isCorrect, erorr:isCorrect?null:event.text, userInput: event.text}
   },
