@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const jsdoc = require('jsdoc-api')
+const { contentRenderers, setup } = require('@botpress/builtins')
 
 const renderers = require('./renderers')
 const actions = require('./actions')
@@ -8,6 +9,9 @@ module.exports = bp => {
   ////////////////////////////
   /// INITIALIZATION
   ////////////////////////////
+
+  setup(bp)
+  _.toPairs(contentRenderers).forEach(params => bp.renderers.register(...params))
 
   // Register all renderers
   Object.keys(renderers).forEach(name => {
@@ -45,7 +49,7 @@ module.exports = bp => {
   //Begin: Added changes for Human in the loop
     bp.middlewares.load()
 
-    bp.hear(/HITL_START/, (event, next) => {
+    bp.hear(/Sorry/, (event, next) => {
       bp.messenger.sendTemplate(event.user.id, {
         template_type: 'button',
         text: 'Bot paused, a human will get in touch very soon.',
@@ -64,7 +68,7 @@ module.exports = bp => {
       bp.hitl.pause(event.platform, event.user.id)
     })
 
-    bp.hear(/HITL_STOP/, (event, next) => {
+    bp.hear(/Start/, (event, next) => {
       bp.messenger.sendText(event.user.id, 'Human in the loop disabled. Bot resumed.')
       bp.hitl.unpause(event.platform, event.user.id)
     })

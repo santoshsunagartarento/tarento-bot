@@ -7,6 +7,7 @@
     "node": ">= 6.1 < 11.0"
   },
   "dependencies": {
+    "@botpress/builtins": "^10.51.0",
     "@botpress/channel-web": "^10.31.0",
     "@botpress/hitl": "^10.50.0",
     "botpress": "^10.31.0",
