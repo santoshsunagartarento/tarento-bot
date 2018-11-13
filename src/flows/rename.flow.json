@@ -1,0 +1,102 @@
+{
+  "version": "0.1",
+  "catchAll": {
+    "onReceive": [],
+    "next": []
+  },
+  "startNode": "node-c259",
+  "nodes": [
+    {
+      "id": "rjamSg7LNJbzrEoftkYxQ",
+      "name": "entry",
+      "onEnter": [
+        "startClientConversation {}"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "welcome-to-clienttest"
+        }
+      ]
+    },
+    {
+      "id": "4a2d137247",
+      "name": "welcome-to-clienttest",
+      "next": [
+        {
+          "condition": "state.isCorrect === true",
+          "node": "answer-client-query"
+        },
+        {
+          "condition": "true",
+          "node": "No-Aswer"
+        }
+      ],
+      "onEnter": [
+        "welcomeToClientChat {}"
+      ],
+      "onReceive": [
+        "knowingTarento {}"
+      ]
+    },
+    {
+      "id": "25e5cd0fbe",
+      "name": "over",
+      "next": [],
+      "onEnter": [],
+      "onReceive": null
+    },
+    {
+      "id": "58d706bcd9",
+      "name": "answer-client-query",
+      "next": [
+        {
+          "condition": "state.isCorrect == true",
+          "node": "welcome-to-clienttest"
+        },
+        {
+          "condition": "true",
+          "node": "No-Aswer"
+        }
+      ],
+      "onEnter": [
+        "welcomeToClientChat {}"
+      ],
+      "onReceive": [
+        "knowingTarento {}"
+      ]
+    },
+    {
+      "id": "26bd8d143f",
+      "name": "No-Aswer",
+      "next": [
+        {
+          "condition": "true",
+          "node": "over"
+        }
+      ],
+      "onEnter": [
+        "say #!text-WQ8Nws"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "473ad85503",
+      "name": "node-c259",
+      "next": [
+        {
+          "condition": "true",
+          "node": "welcome-to-clienttest"
+        }
+      ],
+      "onEnter": [
+        "say #!text-2_OQpk",
+        "say #!text-Jy2fkD"
+      ],
+      "onReceive": [
+        "onReciveName {}"
+      ]
+    }
+  ]
+}

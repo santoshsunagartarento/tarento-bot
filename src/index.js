@@ -22,12 +22,12 @@ module.exports = bp => {
   jsdoc.explain({ files: [__dirname + '/actions.js'] }).then(docs => {
     bp.dialogEngine.registerActionMetadataProvider(fnName => {
       const meta = docs.find(({ name }) => name === fnName)
-      return {
+      /* return {
         desciption: meta.description,
         params: (meta.params || [])
           .filter(({ name }) => name.startsWith('args.'))
           .map(arg => ({ ...arg, name: arg.name.replace('args.', '') }))
-      }
+      } */
     })
     bp.dialogEngine.registerFunctions(actions)
     bp.dialogEngine.registerFunctions(tarentoActions)
@@ -80,5 +80,11 @@ module.exports = bp => {
     })
     //End: Added changes for Human in the loop
 
+    
+  // bp.hear(/[a-z]+/i, async (event, next) => {
+  //   bp.messenger.sendText(event.user.id, "Hi, "+event.text + " Welcome to Tarento");
+  // })
+    // By not calling next() here, we "swallow" the event (won't be processed by the dialog engine below)
+  
 
 }
