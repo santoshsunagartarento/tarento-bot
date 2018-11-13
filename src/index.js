@@ -4,6 +4,7 @@ const { contentRenderers, setup } = require('@botpress/builtins')
 
 const renderers = require('./renderers')
 const actions = require('./actions')
+const tarentoActions = require('./tarentoActions')
 
 module.exports = bp => {
   ////////////////////////////
@@ -29,6 +30,7 @@ module.exports = bp => {
       }
     })
     bp.dialogEngine.registerFunctions(actions)
+    bp.dialogEngine.registerFunctions(tarentoActions)
   })
 
   ////////////////////////////
