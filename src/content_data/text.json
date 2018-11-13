@@ -2,7 +2,7 @@
   {
     "id": "text-0RcWjO",
     "formData": {
-      "text": "Welcome to Tarento",
+      "text": "Thanks!",
       "typing": true
     },
     "createdBy": "admin",
@@ -16,50 +16,5 @@
     },
     "createdBy": "admin",
     "createdOn": "2018-10-25T09:16:11.041Z"
-  },
-  {
-    "id": "text-boEm~n",
-    "formData": {
-      "text": "We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
-      "typing": true
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-10-30T09:39:54.882Z"
-  },
-  {
-    "id": "text-WQ8Nws",
-    "formData": {
-      "text": "Sorry, We could not found any answer. Bot paused, a human will get in touch very soon.",
-      "typing": true
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-10-31T09:34:02.936Z"
-  },
-  {
-    "id": "text-Bul_Au",
-    "formData": {
-      "text": "Okay, let me come back on this",
-      "typing": true
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-10-31T10:06:56.451Z"
-  },
-  {
-    "id": "text-2_OQpk",
-    "formData": {
-      "text": "Say Hello to get started",
-      "typing": true
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-08T07:54:35.855Z"
-  },
-  {
-    "id": "text-Jy2fkD",
-    "formData": {
-      "text": "Could you please help me with ur name?",
-      "typing": true
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-08T07:54:48.952Z"
   }
 ]

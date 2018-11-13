@@ -38,18 +38,29 @@
       ],
       "onReceive": [
         "knowingTarento {}"
-      ]
+      ],
+      "timeoutNode": "timeout"
     },
     {
       "id": "8139d4a534",
       "name": "node-142e",
-      "next": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-e6b2"
+        },
+        {
+          "condition": "state.isCorrect===true",
+          "node": "node-9719"
+        }
+      ],
       "onEnter": [
         "welcomeToChat {}"
       ],
       "onReceive": [
         "knowingTarento {}"
-      ]
+      ],
+      "timeoutNode": "timeout"
     },
     {
       "id": "72b681314f",

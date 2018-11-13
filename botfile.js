@@ -59,14 +59,14 @@ module.exports = {
     Dialog Manager (DM)
   */
   dialogs: {
-    timeoutInterval: '15m',
-    janitorInterval: '10s'
+    timeoutInterval: '5m',
+    janitorInterval: '5s'
   },
 
   /*
     Botpress collects some anonymous usage statistics to help us put our efforts at the right place
    */
-  optOutStats: false,
+  optOutStats: true,
 
   /*
     Where the notifications are stored.
