@@ -88,6 +88,7 @@ module.exports = bp => {
     })
     //End: Added for start message
 
+    //Begin: Added for dialog timeout
     bp.hear(
     { type: /bp_dialog_timeout|text|message|quick_reply|attachment|postback|referral|feed/i },
     async (event, next) => {
@@ -99,6 +100,7 @@ module.exports = bp => {
         event.reply('#!client-queries-4dm7gd');
       }
     })
+    //End: Added for dialog timeout
 
 
 }
