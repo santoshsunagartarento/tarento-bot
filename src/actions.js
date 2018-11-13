@@ -3,11 +3,30 @@ const _ = require('lodash')
 module.exports = {
 
   //Begin: Added for Tarento bot
-  startClientConversation: state => {
+  startClientConversation:(state)=> {
+console.log(state);
     return {
       ...state, // we clone the existing state
       count: 0 // we then reset the number of questions asked to `0`
     }
+  },
+
+  onReciveName:async(state,event)=> {
+    
+    console.log(event.text);
+
+    let messageSent = await event.reply('#!client-queries-y~4ePV');
+    let temp = messageSent.context.question.split(",");
+    temp[0]= temp[0]+" "+event.text;
+    temp = temp[0]+ temp[1];
+    messageSent.context.question = temp;
+    goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+    return {
+      ...state, // We clone the state
+    isCorrect: null, // We reset `isCorrect` (optional)ss
+    goodAnswer, // we then reset the number of questions asked to `0`
+    }
+   
   },
 
   welcomeToClientChat:async(state, event) => {
@@ -29,14 +48,13 @@ module.exports = {
     }
     else
     {
-      messageSent = await event.reply('#!client-queries-y~4ePV');
-    // const goodAnswer = _.find(messageSent.context.choices, { payload: 'TRIVIA_REC' });
-    // const messageSent = await event.reply('#!trivia-question-AwmBFO');
-    // const goodAnswer = messageSent.context.choices.filter(function(ans){
-    //   return ans;
-    // });y
-    // const goodAnswer = _.find(messageSent.context.choices, { payload: 'TRIVIA_GOOD' });
-     goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+      // messageSent = await event.reply('#!client-queries-y~4ePV');
+       messageSent = await event.reply('#!client-queries-y~4ePV');
+       temp = messageSent.context.question.split(",");
+      temp[0]= temp[0]+" "+event.text;
+      temp = temp[0]+ temp[1];
+      messageSent.context.question = temp;
+      goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
     }
     return {
       ...state, // We clone the state

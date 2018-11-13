@@ -4,15 +4,13 @@
     "onReceive": [],
     "next": []
   },
-  "startNode": "entry",
+  "startNode": "node-c259",
   "nodes": [
     {
       "id": "rjamSg7LNJbzrEoftkYxQ",
       "name": "entry",
       "onEnter": [
-        "startClientConversation {}",
-        "say #!text-0RcWjO",
-        "say #!text-boEm~n"
+        "startClientConversation {}"
       ],
       "onReceive": null,
       "next": [
@@ -82,6 +80,23 @@
         "say #!text-WQ8Nws"
       ],
       "onReceive": null
+    },
+    {
+      "id": "473ad85503",
+      "name": "node-c259",
+      "next": [
+        {
+          "condition": "true",
+          "node": "welcome-to-clienttest"
+        }
+      ],
+      "onEnter": [
+        "say #!text-2_OQpk",
+        "say #!text-Jy2fkD"
+      ],
+      "onReceive": [
+        "onReciveName {}"
+      ]
     }
   ]
 }

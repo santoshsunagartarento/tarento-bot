@@ -81,8 +81,8 @@
   {
     "id": "client-queries-y~4ePV",
     "formData": {
-      "question": "How can we help? We're here for you!",
-      "answer": "",
+      "question": "Hi , how can i help you? ",
+      "answer": "NA",
       "criteria": "",
       "recommendations": [
         "About",
@@ -92,5 +92,17 @@
     },
     "createdBy": "admin",
     "createdOn": "2018-11-05T05:46:15.656Z"
+  },
+  {
+    "id": "client-queries-hYOfmp",
+    "formData": {
+      "question": "say, hello to get started",
+      "answer": "Na",
+      "recommendations": [
+        "About"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-09T07:12:39.834Z"
   }
 ]
