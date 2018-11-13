@@ -92,5 +92,18 @@
     },
     "createdBy": "admin",
     "createdOn": "2018-11-05T05:46:15.656Z"
+  },
+  {
+    "id": "client-queries-4dm7gd",
+    "formData": {
+      "question": "Are you sure? you want more information on this!",
+      "answer": "Default timeout",
+      "recommendations": [
+        "Yes",
+        "No"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-13T09:57:57.383Z"
   }
 ]

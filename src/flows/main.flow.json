@@ -1,5 +1,6 @@
 {
   "version": "0.1",
+  "timeoutNode": "timeout",
   "catchAll": {
     "onReceive": [],
     "next": []
@@ -15,6 +16,7 @@
         "say #!text-boEm~n"
       ],
       "onReceive": null,
+      "timeoutNode": "timeout",
       "next": [
         {
           "condition": "true",
@@ -40,7 +42,8 @@
       ],
       "onReceive": [
         "knowingTarento {}"
-      ]
+      ],
+      "timeoutNode": "timeout"
     },
     {
       "id": "25e5cd0fbe",
@@ -67,7 +70,8 @@
       ],
       "onReceive": [
         "knowingTarento {}"
-      ]
+      ],
+      "timeoutNode": "timeout"
     },
     {
       "id": "26bd8d143f",
@@ -80,6 +84,18 @@
       ],
       "onEnter": [
         "say #!text-WQ8Nws"
+      ],
+      "onReceive": null,
+      "timeoutNode": "timeout"
+    },
+    {
+      "id": "2dce1e5487",
+      "name": "timeout",
+      "next": [],
+      "onEnter": [
+        "startClientConversation {}",
+        "say #!text-0RcWjO",
+        "say #!text-boEm~n"
       ],
       "onReceive": null
     }

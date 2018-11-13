@@ -80,5 +80,18 @@ module.exports = bp => {
     })
     //End: Added changes for Human in the loop
 
+    //Begin: Added for start message
+    bp.hear({ type: /visit/i }, async (event, next) => {
+      event.reply('#!text-d6X6Oj')
+      next()
+    })
+    //End: Added for start message
+
+    bp.hear(
+    { type: /bp_dialog_timeout|text|message|quick_reply|attachment|postback|referral|feed/i },
+    async (event, next) => {
+      event.reply('#!client-queries-4dm7gd')
+    })
+
 
 }
