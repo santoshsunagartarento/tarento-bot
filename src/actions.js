@@ -7,11 +7,19 @@ const index = require('./index')
 
 module.exports = {
   
+  startClientConversation: state => {
+
+    return {
+      ...state, // we clone the existing state
+      count: 0 // we then reset the number of questions asked to `0`
+    }
+  },
+  
   welcomeToChat:async(state,event)=>{
     let messageSent,goodAnswer;
 
   if(state.userInput && state.userInput === "About"){
-    messageSent = await event.reply('#!client-queries-8LzjTj');
+    messageSent = await event.reply('#!client-queries-6h~ILK');
     goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
     //Begin: Added to save chat to mongodb
     // mongodbservice.insertChatContentToMongoDb("TARENTO_WEBCHAT", state.userInput, function(err, result) {
@@ -20,7 +28,7 @@ module.exports = {
   }
   else if(state.userInput && state.userInput === "Clients")
   {
-    messageSent = await event.reply('#!client-queries-9wiv1v');
+    messageSent = await event.reply('#!client-queries-KwPlpR');
     goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
     //Begin: Added to save chat to mongodb
     // mongodbservice.insertChatContentToMongoDb("TARENTO_WEBCHAT", state.userInput, function(err, result) {
@@ -30,7 +38,7 @@ module.exports = {
   }
   else if(state.userInput && state.userInput === "Services")
   {
-    messageSent = await event.reply('#!client-queries-_BgQHB');
+    messageSent = await event.reply('#!client-queries-3F~o5c');
     goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
     //Begin: Added to save chat to mongodb
     // mongodbservice.insertChatContentToMongoDb("TARENTO_WEBCHAT", state.userInput, function(err, result) {
@@ -41,11 +49,11 @@ module.exports = {
   else
   {
     // messageSent = await event.reply('#!client-queries-y~4ePV');
-     messageSent = await event.reply('#!client-queries-y~4ePV');
-    //  temp = messageSent.context.question.split(",");
-    // temp[0]= temp[0]+" "+event.text;
-    // temp = temp[0]+ temp[1];
-    // messageSent.context.question = temp;
+     messageSent = await event.reply('#!client-queries-lh~nGY');
+     temp = messageSent.context.question.split(",");
+    temp[0]= temp[0]+" "+event.text;
+    temp = temp[0]+ temp[1];
+    messageSent.context.question = temp;
     goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
   }
   return {

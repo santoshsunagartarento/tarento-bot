@@ -5,7 +5,6 @@ const { contentRenderers, setup } = require('@botpress/builtins')
 const renderers = require('./renderers')
 const actions = require('./actions')
 const tarentoActions = require('./tarentoActions')
-var timeOut = 0;
 
 module.exports = bp => {
   ////////////////////////////
@@ -23,12 +22,12 @@ module.exports = bp => {
   jsdoc.explain({ files: [__dirname + '/actions.js'] }).then(docs => {
     bp.dialogEngine.registerActionMetadataProvider(fnName => {
       const meta = docs.find(({ name }) => name === fnName)
-      /* return {
+      return {
         desciption: meta.description,
         params: (meta.params || [])
           .filter(({ name }) => name.startsWith('args.'))
           .map(arg => ({ ...arg, name: arg.name.replace('args.', '') }))
-      } */
+      }
     })
     bp.dialogEngine.registerFunctions(actions)
     bp.dialogEngine.registerFunctions(tarentoActions)
@@ -81,26 +80,11 @@ module.exports = bp => {
     })
     //End: Added changes for Human in the loop
 
-    //Begin: Added for start message
-    bp.hear({ type: /visit/i }, async (event, next) => {
-      // event.reply('#!text-d6X6Oj')
-      next()
-    })
-    //End: Added for start message
-
-    //Begin: Added for dialog timeout
-    bp.hear(
-    { type: /bp_dialog_timeout|text|message|quick_reply|attachment|postback|referral|feed/i },
-    async (event, next) => {
-      timeOut++;
-      if(timeOut > 1) {
-        timeOut = 0;
-        // event.reply('#!client-queries-4dm7gd');
-      } else {
-        // event.reply('#!client-queries-4dm7gd');
-      }
-    })
-    //End: Added for dialog timeout
-
+    
+  // bp.hear(/.+/i, async (event, next) => {
+  //   bp.messenger.sendText(event.user.id, "Hi, "+event.text + )
+  // })
+    // By not calling next() here, we "swallow" the event (won't be processed by the dialog engine below)
+  
 
 }

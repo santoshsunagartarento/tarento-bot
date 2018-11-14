@@ -92,7 +92,7 @@
       ],
       "onEnter": [
         "say #!text-2_OQpk",
-        "say #!text-Jy2fkD"
+        "say #!text-xpewGA"
       ],
       "onReceive": [
         "onReciveName {}"

@@ -7,7 +7,7 @@
       "id": "0e6afa1a23",
       "name": "entry",
       "onEnter": [
-        "say #!text-Jy2fkD"
+        "say #!text-xpewGA"
       ],
       "onReceive": [
         "setUserTag {}"
@@ -46,12 +46,12 @@
       "name": "node-142e",
       "next": [
         {
-          "condition": "true",
-          "node": "node-e6b2"
-        },
-        {
           "condition": "state.isCorrect===true",
           "node": "node-9719"
+        },
+        {
+          "condition": "true",
+          "node": "node-e6b2"
         }
       ],
       "onEnter": [

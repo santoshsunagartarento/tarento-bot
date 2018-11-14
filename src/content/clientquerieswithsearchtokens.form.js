@@ -46,5 +46,6 @@ module.exports = {
   },
 
   computePreviewText: formData => 'Question: ' + formData.question,
+
   computeMetadata: null
 }
