@@ -90,12 +90,11 @@ let timeOut =0;
     bp.hear(
     { type: /bp_dialog_timeout|text|message|quick_reply|attachment|postback|referral|feed/i },
     async (event, next) => {
-      timeOut++;
-      if(timeOut > 1) {
-        timeOut = 0;
-        event.reply('#!client-queries-wpQcMd');
-      } else {
+      if(timeOut == 0) {
         event.reply('#!client-queries-nlwN9M');
+        timeOut++;
+      } else if(timeOut == 1) {
+        event.reply('#!client-queries-wpQcMd');
       }
     })
     //End: Added for dialog timeout
