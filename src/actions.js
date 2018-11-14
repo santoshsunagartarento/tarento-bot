@@ -4,6 +4,7 @@ var url = "mongodb://localhost:27017/";
 var mongodbservice = require('./mongodbService');
 var hitlService = require('./hitlService');
 const index = require('./index')
+// const { setup } = require('@botpress/builtins');
 
 module.exports = {
   
@@ -49,7 +50,9 @@ module.exports = {
   else
   {
     // messageSent = await event.reply('#!client-queries-y~4ePV');
-     messageSent = await event.reply('#!client-queries-lh~nGY');
+    //  messageSent = await event.reply('#!client-queries-lh~nGY');
+    //  const state = await bp.dialogEngine.stateManager.getState(event.user.id);
+    messageSent =  await event.bp.contentManager.getItem('#!client-queries-lh~nGY')
      temp = messageSent.context.question.split(",");
     temp[0]= temp[0]+" "+event.text;
     temp = temp[0]+ temp[1];
