@@ -60,7 +60,7 @@ module.exports = {
   */
   dialogs: {
     timeoutInterval: '5m',
-    janitorInterval: '5s'
+    janitorInterval: '20s'
   },
 
   /*

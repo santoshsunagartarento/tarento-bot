@@ -7,30 +7,34 @@
       "id": "0e6afa1a23",
       "name": "entry",
       "onEnter": [
+        "say #!text-yioAI_",
         "say #!text-xpewGA"
       ],
-      
       "onReceive": [
-        "setUserTag {}"
+        "saveName {}"
       ],
       "next": [
         {
+          "condition": "state.isName===true",
+          "node": "User-Name"
+        },
+        {
           "condition": "true",
-          "node": "node-9719"
+          "node": "Over"
         }
       ]
     },
     {
       "id": "b3caa74ff1",
-      "name": "node-9719",
+      "name": "Conversation-Recur1",
       "next": [
         {
           "condition": "state.isCorrect===true",
-          "node": "node-142e"
+          "node": "Conversation-Recur2"
         },
         {
           "condition": "true",
-          "node": "node-e6b2"
+          "node": "NoAnswer"
         }
       ],
       "onEnter": [
@@ -39,20 +43,19 @@
       ],
       "onReceive": [
         "knowingTarento {}"
-      ],
-      "timeoutNode": "timeout"
+      ]
     },
     {
       "id": "8139d4a534",
-      "name": "node-142e",
+      "name": "Conversation-Recur2",
       "next": [
         {
           "condition": "state.isCorrect===true",
-          "node": "node-9719"
+          "node": "Conversation-Recur1"
         },
         {
           "condition": "true",
-          "node": "node-e6b2"
+          "node": "NoAnswer"
         }
       ],
       "onEnter": [
@@ -60,15 +63,42 @@
       ],
       "onReceive": [
         "knowingTarento {}"
-      ],
-      "timeoutNode": "timeout"
+      ]
     },
     {
       "id": "72b681314f",
-      "name": "node-e6b2",
+      "name": "NoAnswer",
       "next": [],
       "onEnter": [],
       "onReceive": null
+    },
+    {
+      "id": "59ea603027",
+      "name": "User-Name",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Conversation-Recur1"
+        }
+      ],
+      "onEnter": [
+        "say #!text-JTR2T7"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "2f850a7132",
+      "name": "Over",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": [
+        "say #!text-SwoYzT"
+      ]
     }
   ]
 }

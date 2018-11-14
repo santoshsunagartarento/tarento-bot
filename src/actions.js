@@ -7,7 +7,7 @@ const index = require('./index')
 // const { setup } = require('@botpress/builtins');
 
 module.exports = {
-  
+
   startClientConversation: state => {
 
     return {
@@ -15,9 +15,61 @@ module.exports = {
       count: 0 // we then reset the number of questions asked to `0`
     }
   },
-  
+
+  saveName:async(state,event)=>{
+    let isName,allow=false;
+    let userData = [];
+    let criteria = ["No","By","Sorry"];
+
+    if(event.text.length>0)
+    {
+       userData = event.text.split(" ").length>0? event.text.split(" ") : event.text;
+       if(userData.length>1)
+       {
+        criteria.forEach(function(val){
+          if(userData.includes(val))
+          {
+          allow=true;
+          return;
+          }
+          else
+          allow=false;
+        })
+         
+       }
+     
+    }
+
+      if(!allow)
+      {
+        //  event.reply('#!text-JTR2T7');
+        // goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+        userName = event.text; 
+        isName=true;
+
+       return {
+        ...state, 
+        isName,// We clone the state
+        isCorrect: null, // We reset `isCorrect` (optional)ss
+        userName: userName,
+        // badAnswer
+      }
+      }
+      else{
+        messageSent = await event.reply('#!client-queries-P0g8CF');
+        goodAnswer = _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+        return{
+          ...state,
+          isName,
+          isCorrect: null,
+          goodAnswer
+
+        }
+      }
+  },
+
   welcomeToChat:async(state,event)=>{
-    let messageSent,goodAnswer;
+    let messageSent,goodAnswer,userName;
 
   if(state.userInput && state.userInput === "About"){
     messageSent = await event.reply('#!client-queries-6h~ILK');
@@ -37,7 +89,7 @@ module.exports = {
     // });
     //End: Added to save chat to mongodb
   }
-  else if(state.userInput && state.userInput === "Services")
+  else if(state.userInput && state.userInput === "Projects")
   {
     messageSent = await event.reply('#!client-queries-3F~o5c');
     goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
@@ -49,22 +101,17 @@ module.exports = {
   }
   else
   {
-    // messageSent = await event.reply('#!client-queries-y~4ePV');
-    //  messageSent = await event.reply('#!client-queries-lh~nGY');
-    //  const state = await bp.dialogEngine.stateManager.getState(event.user.id);
-    messageSent =  await event.bp.contentManager.getItem('#!client-queries-lh~nGY')
-     temp = messageSent.context.question.split(",");
-    temp[0]= temp[0]+" "+event.text;
-    temp = temp[0]+ temp[1];
-    messageSent.context.question = temp;
-    goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+     messageSent = await event.reply('#!client-queries-lh~nGY');
+     goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+     userName = event.text;
   }
   return {
     ...state, // We clone the state
     isCorrect: null, // We reset `isCorrect` (optional)ss
     goodAnswer,
+    userName: userName,
     // badAnswer
-  } 
+  }
 },
 
 knowingTarento:(state,event)=>{
@@ -97,8 +144,9 @@ knowingTarento:(state,event)=>{
     }
     if(!isCorrect) {
       //Begin: Added to pauseChatAndNotify
+      event.reply('#!text-jkDyoU');
       hitlService.pauseChatAndNotify(event, function(err, result) {
-        console.log("Chat paused, human will get in touch with user soon");
+     
       });
       //End: Added to pauseChatAndNotify
     }
