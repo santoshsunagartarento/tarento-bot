@@ -9,7 +9,6 @@
       "onEnter": [
         "say #!text-xpewGA"
       ],
-      
       "onReceive": [
         "setUserTag {}"
       ],
@@ -35,7 +34,8 @@
       ],
       "onEnter": [
         "getUserTag {}",
-        "welcomeToChat {}"
+        "welcomeToChat {}",
+        "say #!client-queries-lh~nGY"
       ],
       "onReceive": [
         "knowingTarento {}"

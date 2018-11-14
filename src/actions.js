@@ -6,7 +6,7 @@ var hitlService = require('./hitlService');
 const index = require('./index')
 
 module.exports = {
-  
+
   startClientConversation: state => {
 
     return {
@@ -14,9 +14,9 @@ module.exports = {
       count: 0 // we then reset the number of questions asked to `0`
     }
   },
-  
+
   welcomeToChat:async(state,event)=>{
-    let messageSent,goodAnswer;
+    let messageSent,goodAnswer,userName;
 
   if(state.userInput && state.userInput === "About"){
     messageSent = await event.reply('#!client-queries-6h~ILK');
@@ -48,20 +48,16 @@ module.exports = {
   }
   else
   {
-    // messageSent = await event.reply('#!client-queries-y~4ePV');
-     messageSent = await event.reply('#!client-queries-lh~nGY');
-     temp = messageSent.context.question.split(",");
-    temp[0]= temp[0]+" "+event.text;
-    temp = temp[0]+ temp[1];
-    messageSent.context.question = temp;
-    goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+     //messageSent = await event.reply('#!client-queries-y~4ePV');
+     userName = event.text;
   }
   return {
     ...state, // We clone the state
     isCorrect: null, // We reset `isCorrect` (optional)ss
     goodAnswer,
+    userName: userName,
     // badAnswer
-  } 
+  }
 },
 
 knowingTarento:(state,event)=>{
