@@ -39,8 +39,7 @@
       ],
       "onReceive": [
         "knowingTarento {}"
-      ],
-      "timeoutNode": "timeout"
+      ]
     },
     {
       "id": "8139d4a534",
@@ -60,8 +59,7 @@
       ],
       "onReceive": [
         "knowingTarento {}"
-      ],
-      "timeoutNode": "timeout"
+      ]
     },
     {
       "id": "72b681314f",
