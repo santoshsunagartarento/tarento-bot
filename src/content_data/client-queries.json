@@ -18,7 +18,7 @@
     "id": "client-queries-6h~ILK",
     "formData": {
       "question": "About Tarento: We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
-      "answer":"NA",
+      "answer": "NA",
       "recommendations": [
         "Projects",
         "Clients"
@@ -31,7 +31,7 @@
     "id": "client-queries-KwPlpR",
     "formData": {
       "question": "Clients with us: Cimplyfive,apoteket,Lithium,telenor,cab-hound,INBRIX,Edukul",
-      "answer":"NA",
+      "answer": "NA",
       "recommendations": [
         "About",
         "Projects"
@@ -44,7 +44,7 @@
     "id": "client-queries-ZvKSik",
     "formData": {
       "question": "Technologies used: Custom Java, .Net, PHP & RoR development, Sharepoint, Oracle Middleware, Adobe Flex/Flash, MS Dynamics, Enterprise Mobility, Testing and a few other technology areas.",
-      "answer":"NA",
+      "answer": "NA",
       "recommendations": [
         "Services",
         "Projects",
@@ -59,7 +59,7 @@
     "id": "client-queries-3F~o5c",
     "formData": {
       "question": "Projects handled by us: Microsoft projects,Development of mobile and web-applications,SAP applications and QA",
-      "amswer":"NA",
+      "amswer": "NA",
       "recommendations": [
         "About",
         "Clients"
@@ -72,7 +72,6 @@
     "id": "client-queries-9V51D5",
     "formData": {
       "question": "Want to know the services provided: Development, QA, Business Analyst, Project management, Resources to other companies.",
-
       "recommendations": [
         "About",
         "Technologies",
@@ -96,5 +95,28 @@
     },
     "createdBy": "admin",
     "createdOn": "2018-10-25T10:08:56.188Z"
+  },
+  {
+    "id": "client-queries-nlwN9M",
+    "formData": {
+      "question": "Are you sure? you need more information?",
+      "answer": "dialog timeout",
+      "recommendations": [
+        "Yes",
+        "No"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-14T06:47:28.934Z"
+  },
+  {
+    "id": "client-queries-wpQcMd",
+    "formData": {
+      "question": "As no response, Please get in touch with Admin.",
+      "answer": "dialog timeout reminder",
+      "recommendations": []
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-14T06:48:28.565Z"
   }
 ]
