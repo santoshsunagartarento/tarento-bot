@@ -20,7 +20,7 @@
   {
     "id": "text-boEm~n",
     "formData": {
-      "text": "We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
+      "text": "We are a Nordic-Indian company.",
       "typing": true
     },
     "createdBy": "admin",
@@ -29,19 +29,109 @@
   {
     "id": "text-WQ8Nws",
     "formData": {
-      "text": "Sorry, We could not found any answer. Bot paused, a human will get in touch very soon.",
+      "text": "Sorry i couldn't find your answer.",
       "typing": true
     },
     "createdBy": "admin",
     "createdOn": "2018-10-31T09:34:02.936Z"
   },
   {
-    "id": "text-Bul_Au",
+    "id": "text-01LeJb",
     "formData": {
-      "text": "Okay, let me come back on this",
+      "text": "Hi There! Say hello to get started.",
       "typing": true
     },
     "createdBy": "admin",
-    "createdOn": "2018-10-31T10:06:56.451Z"
+    "createdOn": "2018-11-13T09:17:51.145Z"
+  },
+  {
+    "id": "text-0CDf9V",
+    "formData": {
+      "text": "Thank you.",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-13T09:20:21.242Z"
+  },
+  {
+    "id": "text-YLQli0",
+    "formData": {
+      "text": "Great.",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-13T09:21:10.672Z"
+  },
+  {
+    "id": "text-7udDR1",
+    "formData": {
+      "text": "Fantastic",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-13T09:26:32.102Z"
+  },
+  {
+    "id": "text-eHzTTq",
+    "formData": {
+      "text": "Great to hear!",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-13T09:27:37.099Z"
+  },
+  {
+    "id": "text-NDZrP9",
+    "formData": {
+      "text": "How else can we help you today?",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-13T09:27:49.250Z"
+  },
+  {
+    "id": "text-4urkud",
+    "formData": {
+      "text": "Sorry. I should have asked before. What's your name?",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-13T09:28:39.873Z"
+  },
+  {
+    "id": "text-fW7xuE",
+    "formData": {
+      "text": "Can you share your email address with us? Don't worry we wont spam you.",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-13T09:30:19.280Z"
+  },
+  {
+    "id": "text-seYkHe",
+    "formData": {
+      "text": "And your mobile number also please.",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-13T09:33:02.393Z"
+  },
+  {
+    "id": "text-r2tA8A",
+    "formData": {
+      "text": "Mmm. Doesn't look like an email address",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-13T09:34:55.840Z"
+  },
+  {
+    "id": "text-4tkD92",
+    "formData": {
+      "text": "Thank you. You will be hearing from us very soon.",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-13T09:37:05.252Z"
   }
 ]
