@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "catchAll": {},
-  "startNode": "entry",
+  "startNode": "Hello",
   "nodes": [
     {
       "id": "0e6afa1a23",
@@ -19,8 +19,12 @@
           "node": "User-Name"
         },
         {
-          "condition": "true",
+          "condition": "state.isName==false",
           "node": "Over"
+        },
+        {
+          "condition": "true",
+          "node": "No-Name"
         }
       ]
     },
@@ -98,6 +102,96 @@
       "onEnter": [],
       "onReceive": [
         "say #!text-SwoYzT"
+      ]
+    },
+    {
+      "id": "c6360e6895",
+      "name": "No-Name",
+      "next": [
+        {
+          "condition": "state.isName==true",
+          "node": "User-Name"
+        },
+        {
+          "condition": "state.isName==false",
+          "node": "Over"
+        },
+        {
+          "condition": "true",
+          "node": "Recur-No_name"
+        }
+      ],
+      "onEnter": [
+        "say #!text-nBTuVh"
+      ],
+      "onReceive": [
+        "saveName {}"
+      ]
+    },
+    {
+      "id": "191fdde25f",
+      "name": "Recur-No_name",
+      "next": [
+        {
+          "condition": "state.continueFlow == true",
+          "node": "Conversation-Recur1"
+        },
+        {
+          "condition": "state.continueFlow==false",
+          "node": "entry"
+        },
+        {
+          "condition": "true",
+          "node": "No-Name"
+        }
+      ],
+      "onEnter": [
+        "say #!client-queries-UIAXna"
+      ],
+      "onReceive": [
+        "continueWithoutName {}"
+      ]
+    },
+    {
+      "id": "3100e41f68",
+      "name": "Hello",
+      "next": [
+        {
+          "condition": "state.isQuestion==true",
+          "node": "Entry_Question"
+        },
+        {
+          "condition": "state.startFlow == true",
+          "node": "entry"
+        }
+      ],
+      "onEnter": [
+        "RaisingRandomQuestion {}"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "1cf4e72f31",
+      "name": "Entry_Question",
+      "next": [
+        {
+          "condition": "state.isName==true",
+          "node": "User-Name"
+        },
+        {
+          "condition": "state.isName==false",
+          "node": "Recur-No_name"
+        },
+        {
+          "condition": "true",
+          "node": "No-Name"
+        }
+      ],
+      "onEnter": [
+        "say #!text-xpewGA"
+      ],
+      "onReceive": [
+        "saveName {}"
       ]
     }
   ]
