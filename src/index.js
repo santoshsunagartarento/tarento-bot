@@ -83,7 +83,7 @@ let timeOut =0;
     //Begin: Added for start message
     bp.hear({ type: /visit/i }, async (event, next) => {
       event.reply('#!text-2aQzoP')
-      next()
+      //next() //Commented for now to fix start message issue
     })
     //End: Added for start message
      //Begin: Added for dialog timeout
