@@ -3,6 +3,7 @@ var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 var mongodbservice = require('./mongodbService');
 var hitlService = require('./hitlService');
+var botService = require('./botservice');
 const index = require('./index')
 // const { setup } = require('@botpress/builtins');
 
@@ -26,7 +27,7 @@ module.exports = {
     {
       isQuestion=true;
       event.reply('#!client-queries-6h~ILK');
-      
+
     }else if(projectsPattren.test(event.text))
     {
       isQuestion=true;
@@ -48,7 +49,7 @@ module.exports = {
       });
     }
     return{
-      ...state, 
+      ...state,
       isQuestion:isQuestion,
       startFlow:isContinue
     }
@@ -59,47 +60,63 @@ module.exports = {
     let userData,compareData = [];
     let criteria = ["No","By","Sorry"];
     let suggestions;
-    if(event.text.trim().length>0)
-    {
-       userData = event.text.split(" ").length>0? event.text.split(" ") : event.text;
-       if(userData.length>1)
-       {
-        compareData =  criteria.filter(function(val){
-         return userData.includes(val)?allow=true:allow=false
-        })
-       }
-    
+    let isQuestion = false;
 
-      if(compareData.length>1)
-      {
-        messageSent = await event.reply('#!client-queries-P0g8CF');
-        suggestions = _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
-        return{
-          ...state,
-          isName:false,
-          isCorrect: null,
-          suggestions
+    isQuestion = botService.isQuestion(event.text, function(err, result) {
+      console.log("botService.isQuestion");
+    });
+    console.log(isQuestion);
+    if(isQuestion) {
+      return {
+       ...state,
+       isQuestion: isQuestion,
+     }
+   } else {
+     if(event.text.trim().length>0)
+     {
+        userData = event.text.split(" ").length>0? event.text.split(" ") : event.text;
+        if(userData.length>1)
+        {
+         compareData =  criteria.filter(function(val){
+          return userData.includes(val)?allow=true:allow=false
+         })
         }
-      }
-      else{
-        userName = event.text; 
-        isName=true;
-       return {
-        ...state, 
-        isName,// We clone the state
-        isCorrect: null, // We reset `isCorrect` (optional)ss
-        userName: userName,
-       
-      }
-    }
-  }
-    // if he doesnt enter anything
-    else{
-      return{
-        ...state,
-        isCorrect:null
-      }
-    }
+
+
+       if(compareData.length>1)
+       {
+         messageSent = await event.reply('#!client-queries-P0g8CF');
+         suggestions = _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+         return{
+           ...state,
+           isName:false,
+           isCorrect: null,
+           isQuestion: isQuestion,
+           suggestions
+         }
+       }
+       else{
+         userName = event.text;
+         isName=true;
+        return {
+         ...state,
+         isName,// We clone the state
+         isCorrect: null, // We reset `isCorrect` (optional)ss
+         isQuestion: isQuestion,
+         userName: userName,
+
+       }
+     }
+   }
+     // if he doesnt enter anything
+     else{
+       return{
+         ...state,
+         isCorrect:null,
+         isQuestion: isQuestion,
+       }
+     }
+   }
   },
 
   continueWithoutName:async(state,event)=>{
@@ -201,7 +218,7 @@ knowingTarento:(state,event)=>{
       //Begin: Added to pauseChatAndNotify
       event.reply('#!text-jkDyoU');
       hitlService.pauseChatAndNotify(event, function(err, result) {
-     
+
       });
       //End: Added to pauseChatAndNotify
     }

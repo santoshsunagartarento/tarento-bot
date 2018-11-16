@@ -15,6 +15,10 @@
       ],
       "next": [
         {
+          "condition": "state.isQuestion===true",
+          "node": "Hello"
+        },
+        {
           "condition": "state.isName===true",
           "node": "User-Name"
         },
@@ -174,6 +178,10 @@
       "id": "1cf4e72f31",
       "name": "Entry_Question",
       "next": [
+        {
+          "condition": "state.isQuestion===true",
+          "node": "Hello"
+        },
         {
           "condition": "state.isName==true",
           "node": "User-Name"
