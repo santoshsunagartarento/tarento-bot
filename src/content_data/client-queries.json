@@ -17,7 +17,7 @@
   {
     "id": "client-queries-6h~ILK",
     "formData": {
-      "question": "About Tarento: We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
+      "question": "We are a team of awesome designers, thinkers and engineers who develop full fledged products. We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management.",
       "answer": "NA",
       "recommendations": [
         "Projects",
@@ -30,7 +30,7 @@
   {
     "id": "client-queries-KwPlpR",
     "formData": {
-      "question": "Clients with us: Cimplyfive,apoteket,Lithium,telenor,cab-hound,INBRIX,Edukul",
+      "question": "Cimplyfive, LI(Lithium), apoteket, UIDAI, Walmart, Ekstep.",
       "answer": "NA",
       "recommendations": [
         "About",
@@ -43,7 +43,7 @@
   {
     "id": "client-queries-ZvKSik",
     "formData": {
-      "question": "Technologies used: Custom Java, .Net, PHP & RoR development, Sharepoint, Oracle Middleware, Adobe Flex/Flash, MS Dynamics, Enterprise Mobility, Testing and a few other technology areas.",
+      "question": "Custom Java, .Net, PHP & RoR development, Sharepoint, Oracle Middleware, Adobe Flex/Flash, MS Dynamics, Enterprise Mobility, Testing and a few other technology areas.",
       "answer": "NA",
       "recommendations": [
         "Services",
@@ -58,12 +58,13 @@
   {
     "id": "client-queries-3F~o5c",
     "formData": {
-      "question": "Projects handled by us: Microsoft projects,Development of mobile and web-applications,SAP applications and QA",
-      "amswer": "NA",
+      "question": "Microsoft projects, Development of mobile and web-applications ,SAP applications and Project management.",
+      "answer": "NA",
       "recommendations": [
         "About",
         "Clients"
-      ]
+      ],
+      "amswer": "NA"
     },
     "createdBy": "admin",
     "createdOn": "2018-10-25T09:45:25.595Z"
@@ -71,7 +72,8 @@
   {
     "id": "client-queries-9V51D5",
     "formData": {
-      "question": "Want to know the services provided: Development, QA, Business Analyst, Project management, Resources to other companies.",
+      "question": "Want to know the services provided? Awesome! Development, QA, Business Analyst, Project management, Resources to other companies.",
+      "answer": "NA",
       "recommendations": [
         "About",
         "Technologies",
@@ -112,7 +114,7 @@
   {
     "id": "client-queries-wpQcMd",
     "formData": {
-      "question": "As no response, Please get in touch with Admin.",
+      "question": "Mmm,Sorry there is no response from you and the chat will be terminated soon.",
       "answer": "dialog timeout reminder",
       "recommendations": []
     },
