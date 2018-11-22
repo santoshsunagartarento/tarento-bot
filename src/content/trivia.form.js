@@ -50,6 +50,6 @@ module.exports = {
     }
   },
 
-  computePreviewText: formData => 'Question: ' + formData.question,
+  computePreviewText: formData => 'Answer: ' + formData.answer,
   computeMetadata: null
 }

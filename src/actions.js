@@ -3,6 +3,7 @@ var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 var mongodbservice = require('./mongodbService');
 var hitlService = require('./hitlService');
+var botService = require('./botservice');
 const index = require('./index')
 // const { setup } = require('@botpress/builtins');
 
@@ -16,64 +17,136 @@ module.exports = {
     }
   },
 
+  RaisingRandomQuestion:async(state,event)=>{
+    let isQuestion,isContinue=false;
+    let aboutPattren = new RegExp('about','i');
+    let projectsPattren = new RegExp('projects|project','i');
+    let clientsPattren = new RegExp ('cleints|client','i');
+    let helloPattren = new RegExp('hlo|hello|hii|hi','i');
+    if(aboutPattren.test(event.text))
+    {
+      isQuestion=true;
+      event.reply('#!client-queries-6h~ILK');
+
+    }else if(projectsPattren.test(event.text))
+    {
+      isQuestion=true;
+      event.reply('#!client-queries-3F~o5c');
+    }
+    else if(clientsPattren.test(event.text))
+    {
+      isQuestion=true;
+      event.reply('#!client-queries-KwPlpR');
+    }
+    else if(helloPattren.test(event.text))
+    {
+      isContinue=true;
+    }
+    if(!isQuestion && !isContinue) {
+      //Begin: Added to pauseChatAndNotify
+      event.reply('#!text-jkDyoU');
+      hitlService.pauseChatAndNotify(event, function(err, result) {
+      });
+    }
+    return{
+      ...state,
+      isQuestion:isQuestion,
+      startFlow:isContinue
+    }
+  },
+
   saveName:async(state,event)=>{
     let isName,allow=false;
-    let userData = [];
+    let userData,compareData = [];
     let criteria = ["No","By","Sorry"];
+    let suggestions;
+    let isQuestion = false;
 
-    if(event.text.length>0)
-    {
-       userData = event.text.split(" ").length>0? event.text.split(" ") : event.text;
-       if(userData.length>1)
+    isQuestion = botService.isQuestion(event.text, function(err, result) {
+      console.log("botService.isQuestion");
+    });
+    console.log(isQuestion);
+    if(isQuestion) {
+      return {
+       ...state,
+       isQuestion: isQuestion,
+     }
+   } else {
+     if(event.text.trim().length>0)
+     {
+        userData = event.text.split(" ").length>0? event.text.split(" ") : event.text;
+        if(userData.length>1)
+        {
+         compareData =  criteria.filter(function(val){
+          return userData.includes(val)?allow=true:allow=false
+         })
+        }
+
+
+       if(compareData.length>1)
        {
-        criteria.forEach(function(val){
-          if(userData.includes(val))
-          {
-          allow=true;
-          return;
-          }
-          else
-          allow=false;
-        })
-         
+         messageSent = await event.reply('#!client-queries-P0g8CF');
+         suggestions = _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+         return{
+           ...state,
+           isName:false,
+           isCorrect: null,
+           isQuestion: isQuestion,
+           suggestions
+         }
        }
-     
+       else{
+         userName = event.text;
+         isName=true;
+        return {
+         ...state,
+         isName,// We clone the state
+         isCorrect: null, // We reset `isCorrect` (optional)ss
+         isQuestion: isQuestion,
+         userName: userName,
+
+       }
+     }
+   }
+     // if he doesnt enter anything
+     else{
+       return{
+         ...state,
+         isCorrect:null,
+         isQuestion: isQuestion,
+       }
+     }
+   }
+  },
+
+  continueWithoutName:async(state,event)=>{
+    let continueFlow = false;
+    let pattren = new RegExp('Yes|yeah|yup','i');
+
+    if(pattren.test(event.text))
+    {
+      return{
+        ...state,
+        continueFlow:true,
+        isCorrect:null
+      }
+    }else{
+      return{
+        ...state,
+        continueFlow:false,
+        isCorrect:null
+      }
     }
 
-      if(!allow)
-      {
-        //  event.reply('#!text-JTR2T7');
-        // goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
-        userName = event.text; 
-        isName=true;
 
-       return {
-        ...state, 
-        isName,// We clone the state
-        isCorrect: null, // We reset `isCorrect` (optional)ss
-        userName: userName,
-        // badAnswer
-      }
-      }
-      else{
-        messageSent = await event.reply('#!client-queries-P0g8CF');
-        goodAnswer = _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
-        return{
-          ...state,
-          isName,
-          isCorrect: null,
-          goodAnswer
-
-        }
-      }
   },
 
   welcomeToChat:async(state,event)=>{
-    let messageSent,goodAnswer,userName;
+    let messageSent,suggestions,userName;
 
   if(state.userInput && state.userInput === "About"){
     messageSent = await event.reply('#!client-queries-6h~ILK');
-    goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+    suggestions =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
     //Begin: Added to save chat to mongodb
     // mongodbservice.insertChatContentToMongoDb("TARENTO_WEBCHAT", state.userInput, function(err, result) {
     //   console.log(result);
@@ -82,7 +155,7 @@ module.exports = {
   else if(state.userInput && state.userInput === "Clients")
   {
     messageSent = await event.reply('#!client-queries-KwPlpR');
-    goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+    suggestions =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
     //Begin: Added to save chat to mongodb
     // mongodbservice.insertChatContentToMongoDb("TARENTO_WEBCHAT", state.userInput, function(err, result) {
     //   console.log(result);
@@ -92,7 +165,7 @@ module.exports = {
   else if(state.userInput && state.userInput === "Projects")
   {
     messageSent = await event.reply('#!client-queries-3F~o5c');
-    goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+    suggestions =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
     //Begin: Added to save chat to mongodb
     // mongodbservice.insertChatContentToMongoDb("TARENTO_WEBCHAT", state.userInput, function(err, result) {
     //   console.log(result);
@@ -102,13 +175,13 @@ module.exports = {
   else
   {
      messageSent = await event.reply('#!client-queries-lh~nGY');
-     goodAnswer =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
+     suggestions =  _.pullAllBy(messageSent.context.choices, [{ payload: 'CLIENT_ANS' }], 'payload');
      userName = event.text;
   }
   return {
     ...state, // We clone the state
     isCorrect: null, // We reset `isCorrect` (optional)ss
-    goodAnswer,
+    suggestions,
     userName: userName,
     // badAnswer
   }
@@ -116,17 +189,16 @@ module.exports = {
 
 knowingTarento:(state,event)=>{
     let isCorrect,temp = false ;
-
     let answer;
     let index =-1;
-    console.log(state.goodAnswer )
+    console.log(state.suggestions )
     // console.log(state.badAnswer);
     console.log(event.text);
-    isCorrect = state.goodAnswer && event.text === state.goodAnswer.text
+    isCorrect = state.suggestions && event.text === state.suggestions.text
     if(!isCorrect)
     {
     // let FindArrayinBad =  _.find(state.badAnswer, { text: event.text });
-    let FindArrayinBad =  _.find(state.goodAnswer, { text: event.text });
+    let FindArrayinBad =  _.find(state.suggestions, { text: event.text });
     isCorrect = FindArrayinBad?true:false;
     }
     if(!isCorrect)
@@ -139,21 +211,18 @@ knowingTarento:(state,event)=>{
     if(index!=-1)
     {
       event.text = answer[index];
-      let FindArrayinBad =  _.find(state.goodAnswer, { text: event.text });
+      let FindArrayinBad =  _.find(state.suggestions, { text: event.text });
       isCorrect = FindArrayinBad?true:false;
     }
     if(!isCorrect) {
       //Begin: Added to pauseChatAndNotify
       event.reply('#!text-jkDyoU');
       hitlService.pauseChatAndNotify(event, function(err, result) {
-     
+
       });
       //End: Added to pauseChatAndNotify
     }
     return { ...state, isCorrect, erorr:isCorrect?null:event.text, userInput: event.text}
   },
-
-
-
 
 }

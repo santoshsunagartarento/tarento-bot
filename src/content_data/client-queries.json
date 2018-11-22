@@ -17,7 +17,11 @@
   {
     "id": "client-queries-6h~ILK",
     "formData": {
+<<<<<<< HEAD
       "question": "We are a Nordic-Indian company. Our sales operations and headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
+=======
+      "question": "We are a team of awesome designers, thinkers and engineers who develop full fledged products. We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management.",
+>>>>>>> 5823254c9975e0551efb81c57cc6e57d1f35f4cc
       "answer": "NA",
       "criteria": "Tarento, Nordic-Indian , headquarters, Sweden, technology, Bangalore, Helsinki, Finland, Mobile Apps, Custom Java,.Net, PHP &RoR,  development,Sharepoint, Oracle,Middleware, Adobe Flex/Flash,MS,Dynamics, Enterprise Mobility, Testing, specialization",
       "recommendations": [
@@ -31,7 +35,7 @@
   {
     "id": "client-queries-KwPlpR",
     "formData": {
-      "question": "Clients with us: Cimplyfive,apoteket,Lithium,telenor,cab-hound,INBRIX,Edukul",
+      "question": "Cimplyfive, LI(Lithium), apoteket, UIDAI, Walmart, Ekstep.",
       "answer": "NA",
       "recommendations": [
         "About",
@@ -44,7 +48,7 @@
   {
     "id": "client-queries-ZvKSik",
     "formData": {
-      "question": "Technologies used: Custom Java, .Net, PHP & RoR development, Sharepoint, Oracle Middleware, Adobe Flex/Flash, MS Dynamics, Enterprise Mobility, Testing and a few other technology areas.",
+      "question": "Custom Java, .Net, PHP & RoR development, Sharepoint, Oracle Middleware, Adobe Flex/Flash, MS Dynamics, Enterprise Mobility, Testing and a few other technology areas.",
       "answer": "NA",
       "recommendations": [
         "Services",
@@ -59,12 +63,13 @@
   {
     "id": "client-queries-3F~o5c",
     "formData": {
-      "question": "Projects handled by us: Microsoft projects,Development of mobile and web-applications,SAP applications and QA",
-      "amswer": "NA",
+      "question": "Microsoft projects, Development of mobile and web-applications ,SAP applications and Project management.",
+      "answer": "NA",
       "recommendations": [
         "About",
         "Clients"
-      ]
+      ],
+      "amswer": "NA"
     },
     "createdBy": "admin",
     "createdOn": "2018-10-25T09:45:25.595Z"
@@ -72,7 +77,8 @@
   {
     "id": "client-queries-9V51D5",
     "formData": {
-      "question": "Want to know the services provided: Development, QA, Business Analyst, Project management, Resources to other companies.",
+      "question": "Want to know the services provided? Awesome! Development, QA, Business Analyst, Project management, Resources to other companies.",
+      "answer": "NA",
       "recommendations": [
         "About",
         "Technologies",
@@ -113,7 +119,7 @@
   {
     "id": "client-queries-wpQcMd",
     "formData": {
-      "question": "As no response, Please get in touch with Admin.",
+      "question": "Mmm,Sorry there is no response from you and the chat will be terminated soon.",
       "answer": "dialog timeout reminder",
       "recommendations": []
     },
@@ -134,6 +140,7 @@
     "createdOn": "2018-11-14T09:36:01.478Z"
   },
   {
+<<<<<<< HEAD
     "id": "client-queries-Q9Y2Wf",
     "formData": {
       "question": "We are a team of excellent designers, thinkers and engineers who develop full fledged products in the areas of Mobilty, Backend, SAP, Enterprise and so on",
@@ -283,5 +290,18 @@
     },
     "createdBy": "admin",
     "createdOn": "2018-11-22T06:48:14.315Z"
+=======
+    "id": "client-queries-UIAXna",
+    "formData": {
+      "question": "Do you want to continue without your name??",
+      "answer": "NA",
+      "recommendations": [
+        "Yes",
+        "No"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-15T10:10:25.086Z"
+>>>>>>> 5823254c9975e0551efb81c57cc6e57d1f35f4cc
   }
 ]
