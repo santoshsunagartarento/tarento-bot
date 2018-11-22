@@ -23,6 +23,11 @@ module.exports = {
     let projectsPattren = new RegExp('projects|project','i');
     let clientsPattren = new RegExp ('cleints|client','i');
     let helloPattren = new RegExp('hlo|hello|hii|hi','i');
+    let applicationPattren = new RegExp('Application','i');
+    let mobility = new RegExp('Mobility|mobility|native|mobile','i');
+    let qualityAssurance = new RegExp('Quality|Assurance|qa|testing','i');
+    let netops = new RegExp('Netops|infra|devo','i');
+
     if(aboutPattren.test(event.text))
     {
       isQuestion=true;
@@ -38,6 +43,26 @@ module.exports = {
       isQuestion=true;
       event.reply('#!client-queries-KwPlpR');
     }
+    else if(applicationPattren.test(event.text))
+      {
+        isQuestion=true;
+        event.reply('#!client-queries-OOGlrU');
+      }
+    else if(mobility.test(event.text))
+      {
+        isQuestion=true;
+        event.reply('#!client-queries-eCrrnB');
+      }
+    else if(qualityAssurance.test(event.text))
+      {
+        isQuestion=true;
+        event.reply('#!client-queries-6uUq4v');
+      }
+    else if(netops.test(event.text))
+      {
+        isQuestion=true;
+        event.reply('#!client-queries-fmPF80');
+      }
     else if(helloPattren.test(event.text))
     {
       isContinue=true;
@@ -206,7 +231,11 @@ knowingTarento:(state,event)=>{
       answer = event.text.split(" ");
       index =  answer.indexOf('About');
       index = index!=-1?index:answer.indexOf('Clients');
-     index = index!=-1?index:answer.indexOf( 'Services');
+      index = index!=-1?index:answer.indexOf( 'Services');
+      index = index!=-1?index:answer.indexOf( 'Application');
+      index = index!=-1?index:answer.indexOf( 'Mobility');
+      index = index!=-1?index:answer.indexOf( 'Quality');
+      index = index!=-1?index:answer.indexOf( 'Netops');
     }
     if(index!=-1)
     {

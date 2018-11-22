@@ -146,5 +146,61 @@
     },
     "createdBy": "admin",
     "createdOn": "2018-11-15T10:10:25.086Z"
+  },
+  {
+    "id": "client-queries-OOGlrU",
+    "formData": {
+      "question": "Web application development,Custom application development, System Integration , Content Management Applications,  Automation and Manual testing",
+      "answer": "Application Development",
+      "recommendations": [
+        "About",
+        "Clients",
+        "Projects"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-22T09:50:47.462Z"
+  },
+  {
+    "id": "client-queries-eCrrnB",
+    "formData": {
+      "question": "We develop Android ,IOS, React Native and Angular applications",
+      "answer": "Mobility",
+      "recommendations": [
+        "About",
+        "Clients",
+        "Projects"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-22T09:51:15.476Z"
+  },
+  {
+    "id": "client-queries-6uUq4v",
+    "formData": {
+      "question": "Manual testing, Automation testing, Performance testing, Database testing, Security testing, User Experience testing",
+      "answer": "Quality Assurance",
+      "recommendations": [
+        "About",
+        "Clients",
+        "Projects"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-22T09:51:36.166Z"
+  },
+  {
+    "id": "client-queries-fmPF80",
+    "formData": {
+      "question": "Server Maintainance, Continuous AMS/AO/DevOps services, Azure ,AWS ",
+      "answer": "Netops",
+      "recommendations": [
+        "About",
+        "Clients",
+        "Projects"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-22T09:51:54.684Z"
   }
 ]
