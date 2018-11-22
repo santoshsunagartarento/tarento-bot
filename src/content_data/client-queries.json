@@ -124,7 +124,7 @@
   {
     "id": "client-queries-P0g8CF",
     "formData": {
-      "question": "Are you sure,  you want to quit the chat?",
+      "question": "Are you sure,  you want to continue?",
       "answer": "NA",
       "recommendations": [
         "Yes",
