@@ -224,5 +224,24 @@ knowingTarento:(state,event)=>{
     }
     return { ...state, isCorrect, erorr:isCorrect?null:event.text, userInput: event.text}
   },
+  trackNewConversation: async (state, { bp, user }) => {
+    await bp.analytics.custom.increment(`${'conversation'}~${user.id}`)
+  },
+
+  trackMisunderstood: async (state, { bp, user }) => {
+    await bp.analytics.custom.increment(`${misunderstood}~${user.id}`)
+  },
+
+  track: async (state, { bp }, { metric, value, unique }) => {
+  if (value && value.length) {
+    if (unique === 'true') {
+      await bp.analytics.custom.set(`${metric}~${value}`, 1)
+    } else {
+      await bp.analytics.custom.increment(`${metric}~${value}`)
+    }
+  } else {
+    await bp.analytics.custom.increment(`${metric}`)
+    }
+  }
 
 }

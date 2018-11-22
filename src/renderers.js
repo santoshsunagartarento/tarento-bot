@@ -17,5 +17,16 @@ module.exports = {
     text: data.question,
     quick_replies: data.choices.map(choice => `<${choice.payload}> ${choice.text}`),
     typing: data.typing || '2s'
-  })
+  }),
+  '#translated_text': data => {
+  const language = data.state.language || 'En'
+    return [
+      {
+        typing: true,
+        markdown: true,
+        text: data[`text${language}`],
+        'web-style': { direction: language === 'Ar' ? 'rtl' : 'ltr' }
+      }
+    ]
+  }
 }

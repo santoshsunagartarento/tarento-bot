@@ -17,13 +17,8 @@
   {
     "id": "client-queries-6h~ILK",
     "formData": {
-<<<<<<< HEAD
-      "question": "We are a Nordic-Indian company. Our sales operations and headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
-=======
       "question": "We are a team of awesome designers, thinkers and engineers who develop full fledged products. We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management.",
->>>>>>> 5823254c9975e0551efb81c57cc6e57d1f35f4cc
       "answer": "NA",
-      "criteria": "Tarento, Nordic-Indian , headquarters, Sweden, technology, Bangalore, Helsinki, Finland, Mobile Apps, Custom Java,.Net, PHP &RoR,  development,Sharepoint, Oracle,Middleware, Adobe Flex/Flash,MS,Dynamics, Enterprise Mobility, Testing, specialization",
       "recommendations": [
         "Projects",
         "Clients"
@@ -140,157 +135,6 @@
     "createdOn": "2018-11-14T09:36:01.478Z"
   },
   {
-<<<<<<< HEAD
-    "id": "client-queries-Q9Y2Wf",
-    "formData": {
-      "question": "We are a team of excellent designers, thinkers and engineers who develop full fledged products in the areas of Mobilty, Backend, SAP, Enterprise and so on",
-      "answer": "What does Tarento do?",
-      "criteria": "do,Tarento,team of awesome designers, thinkers, engineers,mobilty,SAP,Enterprise,Digital",
-      "recommendations": [
-        "Projects",
-        "Clients",
-        "Services"
-      ]
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-22T06:26:58.790Z"
-  },
-  {
-    "id": "client-queries-bLLN9p",
-    "formData": {
-      "question": "Tarento Headquaters is in Stockholm, Sweden.",
-      "answer": "Where is the Headquaters of Tarento?",
-      "criteria": "Headquaters,Stockholm,Sweden, tarento",
-      "recommendations": [
-        "Projects",
-        "Services",
-        "Clients"
-      ]
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-22T06:29:35.640Z"
-  },
-  {
-    "id": "client-queries-xuh_JM",
-    "formData": {
-      "question": "Development, Quality Assurance, Business Analysis, Project Management, Outsource  Resources to other companies,UX (User Expericence), Cloud Infrasturcture Management",
-      "answer": "What are the services provided ?",
-      "criteria": "Services,Development,QA,Business Analyst,Project management,Resources,specialities,  Outsource  Resources to other companies,  UX (User Expericence), Cloud Infrasturcture Management ",
-      "recommendations": [
-        "Projects",
-        "Clients",
-        "About"
-      ]
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-22T06:32:35.478Z"
-  },
-  {
-    "id": "client-queries-EwJXQz",
-    "formData": {
-      "question": "Custom Java, .Net, PHP & RoR development, Sharepoint, Oracle Middleware, Adobe Flex/Flash, MS Dynamics, Enterprise Mobility, React,React Native, Angular.js, Node.js",
-      "answer": "What are the technologies used?",
-      "criteria": "Custom Java, .Net, PHP & RoR development, Sharepoint, Oracle Middleware, Adobe Flex/Flash, MS Dynamics, Enterprise Mobility, React,React native,Angular.js,Node.js,technologies",
-      "recommendations": [
-        "Projects",
-        "Clients",
-        "About"
-      ]
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-22T06:34:42.443Z"
-  },
-  {
-    "id": "client-queries-O~BUYD",
-    "formData": {
-      "question": "Enterprise applications, Content manangement systems, Custom application development, System integrations, Development of mobile platforms and web-applications, SAP applications and Quality Assurance",
-      "answer": "What kind of projects are handled by Tarento?",
-      "criteria": "Enterprise applications, Content manangement systems, Custom application development, System integrations, Development of mobile platforms and web-applications, SAP applications and Quality Assurance",
-      "recommendations": [
-        "Services",
-        "Clients",
-        "About"
-      ]
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-22T06:37:33.128Z"
-  },
-  {
-    "id": "client-queries-ffWNEB",
-    "formData": {
-      "question": "Cimplyfive,apoteket,Lithium,telenor,cab-hound,INBRIX,Edukul",
-      "answer": "Clients tied up with Tarento?",
-      "criteria": "Clients,Cimplyfive,apoteket,Lithium,telenor,cab-hound,INBRIX",
-      "recommendations": [
-        "Projects",
-        "Services",
-        "About"
-      ]
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-22T06:38:17.756Z"
-  },
-  {
-    "id": "client-queries-2fZ~WI",
-    "formData": {
-      "question": "400",
-      "answer": "How many resources do you have?",
-      "criteria": "Resources,400",
-      "recommendations": [
-        "Projects",
-        "Services",
-        "About"
-      ]
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-22T06:42:21.244Z"
-  },
-  {
-    "id": "client-queries-nEWZEc",
-    "formData": {
-      "question": "Here is the contact details of company  Bangalore-91 98 86 780 05 64 Finland-+358 400 996 936 Stockholm-+46 73 328 90 72",
-      "answer": "We are facing problem in contacting you?",
-      "criteria": "Bangalore-91 98 86 780 05 64 Finland-+358 400 996 936 Stockholm-+46 73 328 90 72.",
-      "recommendations": [
-        "Projects",
-        "Services",
-        "About",
-        "Clients"
-      ]
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-22T06:43:58.836Z"
-  },
-  {
-    "id": "client-queries-GPym3M",
-    "formData": {
-      "question": "Well! we are service based company.Target audience depends on the project we do. We develop social apps, Transport applications,Educational applications for Instituations,Health care applications,finance applications, Time Management tool for Employees and so on",
-      "answer": "Who is your target audience?(Domain)",
-      "criteria": " service based ,Target audience , social apps, Transport applications, Educational applications for Institutions, Health care applications, finance applications,  Time Management tool.",
-      "recommendations": [
-        "Projects",
-        "Clients",
-        "About"
-      ]
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-22T06:46:53.861Z"
-  },
-  {
-    "id": "client-queries-twAtK1",
-    "formData": {
-      "question": "Lithium and Edukul.",
-      "answer": "Top clients tied up with Tarento from the begining?",
-      "criteria": "Lithium, Edukul,Top",
-      "recommendations": [
-        "Projects",
-        "Services",
-        "About"
-      ]
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-22T06:48:14.315Z"
-=======
     "id": "client-queries-UIAXna",
     "formData": {
       "question": "Do you want to continue without your name??",
@@ -302,6 +146,5 @@
     },
     "createdBy": "admin",
     "createdOn": "2018-11-15T10:10:25.086Z"
->>>>>>> 5823254c9975e0551efb81c57cc6e57d1f35f4cc
   }
 ]
