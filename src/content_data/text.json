@@ -2,7 +2,7 @@
   {
     "id": "text-0RcWjO",
     "formData": {
-      "text": "Welcome to Tarento",
+      "text": "Thanks!",
       "typing": true
     },
     "createdBy": "admin",
@@ -18,120 +18,57 @@
     "createdOn": "2018-10-25T09:16:11.041Z"
   },
   {
-    "id": "text-boEm~n",
+    "id": "text-xpewGA",
     "formData": {
-      "text": "We are a Nordic-Indian company.",
+      "text": "Could you please help me with ur name?",
       "typing": true
     },
     "createdBy": "admin",
-    "createdOn": "2018-10-30T09:39:54.882Z"
+    "createdOn": "2018-11-13T11:52:43.280Z"
   },
   {
-    "id": "text-WQ8Nws",
+    "id": "text-2aQzoP",
     "formData": {
-      "text": "Sorry i couldn't find your answer.",
+      "text": "Welcome to Tarento. Say Hello to get started!",
       "typing": true
     },
     "createdBy": "admin",
-    "createdOn": "2018-10-31T09:34:02.936Z"
+    "createdOn": "2018-11-14T06:42:06.504Z"
   },
   {
-    "id": "text-01LeJb",
+    "id": "text-SwoYzT",
     "formData": {
-      "text": "Hi There! Say hello to get started.",
+      "text": "Thanks, We will be waiting for you",
       "typing": true
     },
     "createdBy": "admin",
-    "createdOn": "2018-11-13T09:17:51.145Z"
+    "createdOn": "2018-11-14T09:41:12.165Z"
   },
   {
-    "id": "text-0CDf9V",
+    "id": "text-jkDyoU",
     "formData": {
-      "text": "Thank you.",
+      "text": "Okay,  Our executive will get in touch with you soon",
       "typing": true
     },
     "createdBy": "admin",
-    "createdOn": "2018-11-13T09:20:21.242Z"
+    "createdOn": "2018-11-14T10:01:47.650Z"
   },
   {
-    "id": "text-YLQli0",
+    "id": "text-JTR2T7",
     "formData": {
-      "text": "Great.",
+      "text": "Thank you {{state.userName}}",
       "typing": true
     },
     "createdBy": "admin",
-    "createdOn": "2018-11-13T09:21:10.672Z"
+    "createdOn": "2018-11-14T10:19:12.368Z"
   },
   {
-    "id": "text-7udDR1",
+    "id": "text-yioAI_",
     "formData": {
-      "text": "Fantastic",
+      "text": "Great!!!",
       "typing": true
     },
     "createdBy": "admin",
-    "createdOn": "2018-11-13T09:26:32.102Z"
-  },
-  {
-    "id": "text-eHzTTq",
-    "formData": {
-      "text": "Great to hear!",
-      "typing": true
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-13T09:27:37.099Z"
-  },
-  {
-    "id": "text-NDZrP9",
-    "formData": {
-      "text": "How else can we help you today?",
-      "typing": true
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-13T09:27:49.250Z"
-  },
-  {
-    "id": "text-4urkud",
-    "formData": {
-      "text": "Sorry. I should have asked before. What's your name?",
-      "typing": true
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-13T09:28:39.873Z"
-  },
-  {
-    "id": "text-fW7xuE",
-    "formData": {
-      "text": "Can you share your email address with us? Don't worry we wont spam you.",
-      "typing": true
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-13T09:30:19.280Z"
-  },
-  {
-    "id": "text-seYkHe",
-    "formData": {
-      "text": "And your mobile number also please.",
-      "typing": true
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-13T09:33:02.393Z"
-  },
-  {
-    "id": "text-r2tA8A",
-    "formData": {
-      "text": "Mmm. Doesn't look like an email address",
-      "typing": true
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-13T09:34:55.840Z"
-  },
-  {
-    "id": "text-4tkD92",
-    "formData": {
-      "text": "Thank you. You will be hearing from us very soon.",
-      "typing": true
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-13T09:37:05.252Z"
+    "createdOn": "2018-11-14T10:40:27.719Z"
   }
 ]

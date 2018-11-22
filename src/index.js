@@ -10,7 +10,7 @@ module.exports = bp => {
   ////////////////////////////
   /// INITIALIZATION
   ////////////////////////////
-
+let timeOut =0;
   setup(bp)
   _.toPairs(contentRenderers).forEach(params => bp.renderers.register(...params))
 
@@ -22,12 +22,12 @@ module.exports = bp => {
   jsdoc.explain({ files: [__dirname + '/actions.js'] }).then(docs => {
     bp.dialogEngine.registerActionMetadataProvider(fnName => {
       const meta = docs.find(({ name }) => name === fnName)
-      return {
+      /* return {
         desciption: meta.description,
         params: (meta.params || [])
           .filter(({ name }) => name.startsWith('args.'))
           .map(arg => ({ ...arg, name: arg.name.replace('args.', '') }))
-      }
+      } */
     })
     bp.dialogEngine.registerFunctions(actions)
     bp.dialogEngine.registerFunctions(tarentoActions)
@@ -80,5 +80,23 @@ module.exports = bp => {
     })
     //End: Added changes for Human in the loop
 
+    //Begin: Added for start message
+    bp.hear({ type: /visit/i }, async (event, next) => {
+      event.reply('#!text-2aQzoP')
+      next()
+    })
+    //End: Added for start message
+     //Begin: Added for dialog timeout
+    bp.hear(
+    { type: /bp_dialog_timeout|text|message|quick_reply|attachment|postback|referral|feed/i },
+    async (event, next) => {
+      if(timeOut == 0) {
+        event.reply('#!client-queries-nlwN9M');
+        timeOut++;
+      } else if(timeOut == 1) {
+        event.reply('#!client-queries-wpQcMd');
+      }
+    })
+    //End: Added for dialog timeout
 
 }

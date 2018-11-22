@@ -1,87 +1,104 @@
 {
   "version": "0.1",
-  "catchAll": {
-    "onReceive": [],
-    "next": []
-  },
+  "catchAll": {},
   "startNode": "entry",
   "nodes": [
     {
-      "id": "rjamSg7LNJbzrEoftkYxQ",
+      "id": "0e6afa1a23",
       "name": "entry",
       "onEnter": [
-        "startClientConversation {}",
-        "say #!text-0RcWjO",
-        "say #!text-boEm~n"
+        "say #!text-yioAI_",
+        "say #!text-xpewGA"
       ],
-      "onReceive": null,
+      "onReceive": [
+        "saveName {}"
+      ],
       "next": [
         {
+          "condition": "state.isName===true",
+          "node": "User-Name"
+        },
+        {
           "condition": "true",
-          "node": "welcome-to-clienttest"
+          "node": "Over"
         }
       ]
     },
     {
-      "id": "4a2d137247",
-      "name": "welcome-to-clienttest",
+      "id": "b3caa74ff1",
+      "name": "Conversation-Recur1",
       "next": [
         {
-          "condition": "state.isCorrect === true",
-          "node": "answer-client-query"
+          "condition": "state.isCorrect===true",
+          "node": "Conversation-Recur2"
         },
         {
           "condition": "true",
-          "node": "No-Aswer"
+          "node": "NoAnswer"
         }
       ],
       "onEnter": [
-        "welcomeToClientChat {}"
+        "getUserTag {}",
+        "welcomeToChat {}"
       ],
       "onReceive": [
         "knowingTarento {}"
       ]
     },
     {
-      "id": "25e5cd0fbe",
-      "name": "over",
+      "id": "8139d4a534",
+      "name": "Conversation-Recur2",
+      "next": [
+        {
+          "condition": "state.isCorrect===true",
+          "node": "Conversation-Recur1"
+        },
+        {
+          "condition": "true",
+          "node": "NoAnswer"
+        }
+      ],
+      "onEnter": [
+        "welcomeToChat {}"
+      ],
+      "onReceive": [
+        "knowingTarento {}"
+      ]
+    },
+    {
+      "id": "72b681314f",
+      "name": "NoAnswer",
       "next": [],
       "onEnter": [],
       "onReceive": null
     },
     {
-      "id": "58d706bcd9",
-      "name": "answer-client-query",
-      "next": [
-        {
-          "condition": "state.isCorrect == true",
-          "node": "welcome-to-clienttest"
-        },
-        {
-          "condition": "true",
-          "node": "No-Aswer"
-        }
-      ],
-      "onEnter": [
-        "welcomeToClientChat {}"
-      ],
-      "onReceive": [
-        "knowingTarento {}"
-      ]
-    },
-    {
-      "id": "26bd8d143f",
-      "name": "No-Aswer",
+      "id": "59ea603027",
+      "name": "User-Name",
       "next": [
         {
           "condition": "true",
-          "node": "over"
+          "node": "Conversation-Recur1"
         }
       ],
       "onEnter": [
-        "say #!text-WQ8Nws"
+        "say #!text-JTR2T7"
       ],
       "onReceive": null
+    },
+    {
+      "id": "2f850a7132",
+      "name": "Over",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": [
+        "say #!text-SwoYzT"
+      ]
     }
   ]
 }

@@ -1,96 +1,287 @@
 [
   {
-    "id": "client-queries-8LzjTj",
+    "id": "client-queries-wWvjVU",
     "formData": {
-      "question": "We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
-      "answer": "About Tarento",
-      "criteria": "About",
+      "question": "Welcome to Tarento!",
       "recommendations": [
-        "Clients",
-        "Services"
+        "About Tarento",
+        "Want to know the services provided?",
+        "Technologies used?",
+        "Projects handled by us?\"",
+        "Clients with us!"
       ]
     },
     "createdBy": "admin",
-    "createdOn": "2018-11-02T08:18:36.501Z"
+    "createdOn": "2018-10-25T09:36:54.146Z"
   },
   {
-    "id": "client-queries-9wiv1v",
+    "id": "client-queries-6h~ILK",
     "formData": {
-      "question": " Cimplyfive,apoteket,Lithium,telenor,cab-hound,INBRIX,Edukul",
-      "answer": "Clients in Tarento",
-      "criteria": "Clients",
+      "question": "We are a Nordic-Indian company. Our sales operations and headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland.",
+      "answer": "NA",
+      "criteria": "Tarento, Nordic-Indian , headquarters, Sweden, technology, Bangalore, Helsinki, Finland, Mobile Apps, Custom Java,.Net, PHP &RoR,  development,Sharepoint, Oracle,Middleware, Adobe Flex/Flash,MS,Dynamics, Enterprise Mobility, Testing, specialization",
+      "recommendations": [
+        "Projects",
+        "Clients"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-10-25T09:43:41.512Z"
+  },
+  {
+    "id": "client-queries-KwPlpR",
+    "formData": {
+      "question": "Clients with us: Cimplyfive,apoteket,Lithium,telenor,cab-hound,INBRIX,Edukul",
+      "answer": "NA",
       "recommendations": [
         "About",
-        "Services"
+        "Projects"
       ]
     },
     "createdBy": "admin",
-    "createdOn": "2018-11-02T08:19:20.314Z"
+    "createdOn": "2018-10-25T09:44:12.351Z"
   },
   {
-    "id": "client-queries-3fT2De",
+    "id": "client-queries-ZvKSik",
     "formData": {
-      "question": "Technologies used in Tarento",
-      "answer": "Custom Java, .Net, PHP & RoR development, Sharepoint, Oracle Middleware, Adobe Flex/Flash, MS Dynamics, Enterprise Mobility, Testing and a few other technology areas.",
-      "criteria": "Technologies",
-      "recommendations": []
+      "question": "Technologies used: Custom Java, .Net, PHP & RoR development, Sharepoint, Oracle Middleware, Adobe Flex/Flash, MS Dynamics, Enterprise Mobility, Testing and a few other technology areas.",
+      "answer": "NA",
+      "recommendations": [
+        "Services",
+        "Projects",
+        "About",
+        "Clients"
+      ]
     },
     "createdBy": "admin",
-    "createdOn": "2018-11-02T08:19:50.071Z"
+    "createdOn": "2018-10-25T09:44:32.464Z"
   },
   {
-    "id": "client-queries-P99~YF",
+    "id": "client-queries-3F~o5c",
     "formData": {
-      "question": "Projects handled by Tarento",
-      "answer": "Microsoft projects,Development of mobile and web-applications,SAP applications and QA",
-      "criteria": "Projects",
-      "recommendations": []
-    },
-    "createdBy": "admin",
-    "createdOn": "2018-11-02T08:20:11.317Z"
-  },
-  {
-    "id": "client-queries-_BgQHB",
-    "formData": {
-      "question": "Development, QA, Business Analyst, Project management, Resources to other companies.",
-      "answer": "Services provided by Tarento",
-      "criteria": "Services",
+      "question": "Projects handled by us: Microsoft projects,Development of mobile and web-applications,SAP applications and QA",
+      "amswer": "NA",
       "recommendations": [
         "About",
         "Clients"
       ]
     },
     "createdBy": "admin",
-    "createdOn": "2018-11-02T08:20:40.820Z"
+    "createdOn": "2018-10-25T09:45:25.595Z"
   },
   {
-    "id": "client-queries-wu~T4r",
+    "id": "client-queries-9V51D5",
     "formData": {
-      "question": "Welcome To Tarento",
-      "answer": "Hey! Welcome to Tarento World We are a Nordic-Indian company. Our headquarters is in Stockholm, Sweden. Our biggest unit and technology work is in Bangalore, India. Our consulting operations and data management expertise is in Helsinki, Finland. How can we help? We're here for you!",
-      "criteria": "",
+      "question": "Want to know the services provided: Development, QA, Business Analyst, Project management, Resources to other companies.",
       "recommendations": [
         "About",
+        "Technologies",
+        "Projects",
+        "Clients"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-10-25T09:45:50.957Z"
+  },
+  {
+    "id": "client-queries-lh~nGY",
+    "formData": {
+      "question": "How can i assist you?",
+      "answer": "NA",
+      "recommendations": [
+        "About",
+        "Clients",
+        "Projects"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-10-25T10:08:56.188Z"
+  },
+  {
+    "id": "client-queries-nlwN9M",
+    "formData": {
+      "question": "Are you sure? you need more information?",
+      "answer": "dialog timeout",
+      "recommendations": [
+        "Yes",
+        "No"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-14T06:47:28.934Z"
+  },
+  {
+    "id": "client-queries-wpQcMd",
+    "formData": {
+      "question": "As no response, Please get in touch with Admin.",
+      "answer": "dialog timeout reminder",
+      "recommendations": []
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-14T06:48:28.565Z"
+  },
+  {
+    "id": "client-queries-P0g8CF",
+    "formData": {
+      "question": "Are you sure,  you want to quit the chat?",
+      "answer": "NA",
+      "recommendations": [
+        "Yes",
+        "No"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-14T09:36:01.478Z"
+  },
+  {
+    "id": "client-queries-Q9Y2Wf",
+    "formData": {
+      "question": "We are a team of excellent designers, thinkers and engineers who develop full fledged products in the areas of Mobilty, Backend, SAP, Enterprise and so on",
+      "answer": "What does Tarento do?",
+      "criteria": "do,Tarento,team of awesome designers, thinkers, engineers,mobilty,SAP,Enterprise,Digital",
+      "recommendations": [
+        "Projects",
         "Clients",
         "Services"
       ]
     },
     "createdBy": "admin",
-    "createdOn": "2018-11-02T09:15:06.482Z"
+    "createdOn": "2018-11-22T06:26:58.790Z"
   },
   {
-    "id": "client-queries-y~4ePV",
+    "id": "client-queries-bLLN9p",
     "formData": {
-      "question": "How can we help? We're here for you!",
-      "answer": "",
-      "criteria": "",
+      "question": "Tarento Headquaters is in Stockholm, Sweden.",
+      "answer": "Where is the Headquaters of Tarento?",
+      "criteria": "Headquaters,Stockholm,Sweden, tarento",
       "recommendations": [
-        "About",
-        "Clients",
-        "Services"
+        "Projects",
+        "Services",
+        "Clients"
       ]
     },
     "createdBy": "admin",
-    "createdOn": "2018-11-05T05:46:15.656Z"
+    "createdOn": "2018-11-22T06:29:35.640Z"
+  },
+  {
+    "id": "client-queries-xuh_JM",
+    "formData": {
+      "question": "Development, Quality Assurance, Business Analysis, Project Management, Outsource  Resources to other companies,UX (User Expericence), Cloud Infrasturcture Management",
+      "answer": "What are the services provided ?",
+      "criteria": "Services,Development,QA,Business Analyst,Project management,Resources,specialities,  Outsource  Resources to other companies,  UX (User Expericence), Cloud Infrasturcture Management ",
+      "recommendations": [
+        "Projects",
+        "Clients",
+        "About"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-22T06:32:35.478Z"
+  },
+  {
+    "id": "client-queries-EwJXQz",
+    "formData": {
+      "question": "Custom Java, .Net, PHP & RoR development, Sharepoint, Oracle Middleware, Adobe Flex/Flash, MS Dynamics, Enterprise Mobility, React,React Native, Angular.js, Node.js",
+      "answer": "What are the technologies used?",
+      "criteria": "Custom Java, .Net, PHP & RoR development, Sharepoint, Oracle Middleware, Adobe Flex/Flash, MS Dynamics, Enterprise Mobility, React,React native,Angular.js,Node.js,technologies",
+      "recommendations": [
+        "Projects",
+        "Clients",
+        "About"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-22T06:34:42.443Z"
+  },
+  {
+    "id": "client-queries-O~BUYD",
+    "formData": {
+      "question": "Enterprise applications, Content manangement systems, Custom application development, System integrations, Development of mobile platforms and web-applications, SAP applications and Quality Assurance",
+      "answer": "What kind of projects are handled by Tarento?",
+      "criteria": "Enterprise applications, Content manangement systems, Custom application development, System integrations, Development of mobile platforms and web-applications, SAP applications and Quality Assurance",
+      "recommendations": [
+        "Services",
+        "Clients",
+        "About"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-22T06:37:33.128Z"
+  },
+  {
+    "id": "client-queries-ffWNEB",
+    "formData": {
+      "question": "Cimplyfive,apoteket,Lithium,telenor,cab-hound,INBRIX,Edukul",
+      "answer": "Clients tied up with Tarento?",
+      "criteria": "Clients,Cimplyfive,apoteket,Lithium,telenor,cab-hound,INBRIX",
+      "recommendations": [
+        "Projects",
+        "Services",
+        "About"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-22T06:38:17.756Z"
+  },
+  {
+    "id": "client-queries-2fZ~WI",
+    "formData": {
+      "question": "400",
+      "answer": "How many resources do you have?",
+      "criteria": "Resources,400",
+      "recommendations": [
+        "Projects",
+        "Services",
+        "About"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-22T06:42:21.244Z"
+  },
+  {
+    "id": "client-queries-nEWZEc",
+    "formData": {
+      "question": "Here is the contact details of company  Bangalore-91 98 86 780 05 64 Finland-+358 400 996 936 Stockholm-+46 73 328 90 72",
+      "answer": "We are facing problem in contacting you?",
+      "criteria": "Bangalore-91 98 86 780 05 64 Finland-+358 400 996 936 Stockholm-+46 73 328 90 72.",
+      "recommendations": [
+        "Projects",
+        "Services",
+        "About",
+        "Clients"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-22T06:43:58.836Z"
+  },
+  {
+    "id": "client-queries-GPym3M",
+    "formData": {
+      "question": "Well! we are service based company.Target audience depends on the project we do. We develop social apps, Transport applications,Educational applications for Instituations,Health care applications,finance applications, Time Management tool for Employees and so on",
+      "answer": "Who is your target audience?(Domain)",
+      "criteria": " service based ,Target audience , social apps, Transport applications, Educational applications for Institutions, Health care applications, finance applications,  Time Management tool.",
+      "recommendations": [
+        "Projects",
+        "Clients",
+        "About"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-22T06:46:53.861Z"
+  },
+  {
+    "id": "client-queries-twAtK1",
+    "formData": {
+      "question": "Lithium and Edukul.",
+      "answer": "Top clients tied up with Tarento from the begining?",
+      "criteria": "Lithium, Edukul,Top",
+      "recommendations": [
+        "Projects",
+        "Services",
+        "About"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-11-22T06:48:14.315Z"
   }
 ]
