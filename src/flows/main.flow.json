@@ -170,7 +170,8 @@
         }
       ],
       "onEnter": [
-        "RaisingRandomQuestion {}"
+        "RaisingRandomQuestion {}",
+        "trackNewConversation {}"
       ],
       "onReceive": null
     },
